@@ -1,7 +1,7 @@
 {
-  "generated": "2026-08-31T00:38:32.403Z",
+  "generated": "2026-09-07T00:12:50.897Z",
   "run": "full",
-  "sample": "수학|수학1|지수함수와 로그함수 · 기본",
+  "sample": "수학|수학1|삼각함수 · 기본",
   "subjects_checked": 90,
   "critical_flagged": 2,
   "answer_flagged": [],
@@ -9,8 +9,8 @@
     {
       "subject": "독서",
       "category": "국어",
-      "unit": "인문·예술 독서 · 기본",
-      "topic": "인문·예술 독서 기본",
+      "unit": "사회·문화 독서 · 기본",
+      "topic": "사회·문화 독서 기본",
       "status": "ok",
       "flags": [],
       "fixed": 0
@@ -18,19 +18,17 @@
     {
       "subject": "독서",
       "category": "국어",
-      "unit": "인문·예술 독서 · 심화",
-      "topic": "인문·예술 독서 심화",
-      "status": "flagged",
-      "flags": [
-        "figMissing"
-      ],
+      "unit": "사회·문화 독서 · 심화",
+      "topic": "사회·문화 독서 심화",
+      "status": "ok",
+      "flags": [],
       "fixed": 0
     },
     {
       "subject": "독서",
       "category": "국어",
-      "unit": "인문·예술 독서 · 킬러",
-      "topic": "인문·예술 독서 킬러",
+      "unit": "사회·문화 독서 · 킬러",
+      "topic": "사회·문화 독서 킬러",
       "status": "ok",
       "flags": [],
       "fixed": 0
@@ -38,8 +36,8 @@
     {
       "subject": "문학",
       "category": "국어",
-      "unit": "현대시 · 기본",
-      "topic": "현대시 기본",
+      "unit": "현대소설 · 기본",
+      "topic": "현대소설 기본",
       "status": "ok",
       "flags": [],
       "fixed": 0
@@ -47,8 +45,8 @@
     {
       "subject": "문학",
       "category": "국어",
-      "unit": "현대시 · 심화",
-      "topic": "현대시 심화",
+      "unit": "현대소설 · 심화",
+      "topic": "현대소설 심화",
       "status": "ok",
       "flags": [],
       "fixed": 0
@@ -56,8 +54,8 @@
     {
       "subject": "문학",
       "category": "국어",
-      "unit": "현대시 · 킬러",
-      "topic": "현대시 킬러",
+      "unit": "현대소설 · 킬러",
+      "topic": "현대소설 킬러",
       "status": "ok",
       "flags": [],
       "fixed": 0
@@ -65,8 +63,19 @@
     {
       "subject": "화법과작문",
       "category": "국어",
-      "unit": "화법: 발표·토론·협상 · 기본",
-      "topic": "화법: 발표·토론·협상 기본",
+      "unit": "작문: 설득·정보전달·성찰 · 기본",
+      "topic": "작문: 설득·정보전달·성찰 기본",
+      "status": "flagged",
+      "flags": [
+        "figMissing"
+      ],
+      "fixed": 0
+    },
+    {
+      "subject": "화법과작문",
+      "category": "국어",
+      "unit": "작문: 설득·정보전달·성찰 · 심화",
+      "topic": "작문: 설득·정보전달·성찰 심화",
       "status": "ok",
       "flags": [],
       "fixed": 0
@@ -74,17 +83,35 @@
     {
       "subject": "화법과작문",
       "category": "국어",
-      "unit": "화법: 발표·토론·협상 · 심화",
-      "topic": "화법: 발표·토론·협상 심화",
+      "unit": "작문: 설득·정보전달·성찰 · 킬러",
+      "topic": "작문: 설득·정보전달·성찰 킬러",
+      "status": "ok",
+      "flags": [],
+      "fixed": 0
+    },
+    {
+      "subject": "언어와매체",
+      "category": "국어",
+      "unit": "문장과 담화 · 기본",
+      "topic": "문장과 담화 기본",
+      "status": "ok",
+      "flags": [],
+      "fixed": 0
+    },
+    {
+      "subject": "언어와매체",
+      "category": "국어",
+      "unit": "문장과 담화 · 심화",
+      "topic": "문장과 담화 심화",
       "status": "ok",
       "flags": [],
       "fixed": 1
     },
     {
-      "subject": "화법과작문",
+      "subject": "언어와매체",
       "category": "국어",
-      "unit": "화법: 발표·토론·협상 · 킬러",
-      "topic": "화법: 발표·토론·협상 킬러",
+      "unit": "문장과 담화 · 킬러",
+      "topic": "문장과 담화 킬러",
       "status": "flagged",
       "flags": [
         "figMissing"
@@ -92,28 +119,10 @@
       "fixed": 1
     },
     {
-      "subject": "언어와매체",
-      "category": "국어",
-      "unit": "음운과 단어 · 기본",
-      "topic": "음운과 단어 기본",
-      "status": "ok",
-      "flags": [],
-      "fixed": 1
-    },
-    {
-      "subject": "언어와매체",
-      "category": "국어",
-      "unit": "음운과 단어 · 심화",
-      "topic": "음운과 단어 심화",
-      "status": "ok",
-      "flags": [],
-      "fixed": 2
-    },
-    {
-      "subject": "언어와매체",
-      "category": "국어",
-      "unit": "음운과 단어 · 킬러",
-      "topic": "음운과 단어 킬러",
+      "subject": "독해",
+      "category": "영어",
+      "unit": "대의 파악: 주제·요지·제목 · 기본",
+      "topic": "대의 파악: 주제·요지·제목 기본",
       "status": "ok",
       "flags": [],
       "fixed": 0
@@ -121,8 +130,8 @@
     {
       "subject": "독해",
       "category": "영어",
-      "unit": "어법과 어휘 · 기본",
-      "topic": "어법과 어휘 기본",
+      "unit": "대의 파악: 주제·요지·제목 · 심화",
+      "topic": "대의 파악: 주제·요지·제목 심화",
       "status": "ok",
       "flags": [],
       "fixed": 0
@@ -130,17 +139,8 @@
     {
       "subject": "독해",
       "category": "영어",
-      "unit": "어법과 어휘 · 심화",
-      "topic": "어법과 어휘 심화",
-      "status": "ok",
-      "flags": [],
-      "fixed": 0
-    },
-    {
-      "subject": "독해",
-      "category": "영어",
-      "unit": "어법과 어휘 · 킬러",
-      "topic": "어법과 어휘 킬러",
+      "unit": "대의 파악: 주제·요지·제목 · 킬러",
+      "topic": "대의 파악: 주제·요지·제목 킬러",
       "status": "ok",
       "flags": [],
       "fixed": 0
@@ -148,17 +148,8 @@
     {
       "subject": "한국사",
       "category": "한국사",
-      "unit": "전근대(고대~조선) · 기본",
-      "topic": "전근대(고대~조선) 기본",
-      "status": "ok",
-      "flags": [],
-      "fixed": 0
-    },
-    {
-      "subject": "한국사",
-      "category": "한국사",
-      "unit": "전근대(고대~조선) · 심화",
-      "topic": "전근대(고대~조선) 심화",
+      "unit": "개항기와 근대 · 기본",
+      "topic": "개항기와 근대 기본",
       "status": "ok",
       "flags": [],
       "fixed": 1
@@ -166,17 +157,17 @@
     {
       "subject": "한국사",
       "category": "한국사",
-      "unit": "전근대(고대~조선) · 킬러",
-      "topic": "전근대(고대~조선) 킬러",
+      "unit": "개항기와 근대 · 심화",
+      "topic": "개항기와 근대 심화",
       "status": "ok",
       "flags": [],
-      "fixed": 0
+      "fixed": 1
     },
     {
-      "subject": "수학1",
-      "category": "수학",
-      "unit": "지수함수와 로그함수 · 기본",
-      "topic": "지수함수와 로그함수 기본",
+      "subject": "한국사",
+      "category": "한국사",
+      "unit": "개항기와 근대 · 킬러",
+      "topic": "개항기와 근대 킬러",
       "status": "ok",
       "flags": [],
       "fixed": 3
@@ -184,17 +175,26 @@
     {
       "subject": "수학1",
       "category": "수학",
-      "unit": "지수함수와 로그함수 · 심화",
-      "topic": "지수함수와 로그함수 심화",
+      "unit": "삼각함수 · 기본",
+      "topic": "삼각함수 기본",
       "status": "ok",
       "flags": [],
-      "fixed": 0
+      "fixed": 3
     },
     {
       "subject": "수학1",
       "category": "수학",
-      "unit": "지수함수와 로그함수 · 킬러",
-      "topic": "지수함수와 로그함수 킬러",
+      "unit": "삼각함수 · 심화",
+      "topic": "삼각함수 심화",
+      "status": "ok",
+      "flags": [],
+      "fixed": 2
+    },
+    {
+      "subject": "수학1",
+      "category": "수학",
+      "unit": "삼각함수 · 킬러",
+      "topic": "삼각함수 킬러",
       "status": "ok",
       "flags": [],
       "fixed": 0
@@ -202,8 +202,17 @@
     {
       "subject": "수학2",
       "category": "수학",
-      "unit": "미분 · 기본",
-      "topic": "미분 기본",
+      "unit": "적분 · 기본",
+      "topic": "적분 기본",
+      "status": "ok",
+      "flags": [],
+      "fixed": 3
+    },
+    {
+      "subject": "수학2",
+      "category": "수학",
+      "unit": "적분 · 심화",
+      "topic": "적분 심화",
       "status": "ok",
       "flags": [],
       "fixed": 1
@@ -211,17 +220,8 @@
     {
       "subject": "수학2",
       "category": "수학",
-      "unit": "미분 · 심화",
-      "topic": "미분 심화",
-      "status": "ok",
-      "flags": [],
-      "fixed": 4
-    },
-    {
-      "subject": "수학2",
-      "category": "수학",
-      "unit": "미분 · 킬러",
-      "topic": "미분 킬러",
+      "unit": "적분 · 킬러",
+      "topic": "적분 킬러",
       "status": "ok",
       "flags": [],
       "fixed": 6
@@ -229,17 +229,8 @@
     {
       "subject": "확률과통계",
       "category": "수학",
-      "unit": "확률 · 기본",
-      "topic": "확률 기본",
-      "status": "ok",
-      "flags": [],
-      "fixed": 1
-    },
-    {
-      "subject": "확률과통계",
-      "category": "수학",
-      "unit": "확률 · 심화",
-      "topic": "확률 심화",
+      "unit": "통계: 확률분포와 정규분포 · 기본",
+      "topic": "통계: 확률분포와 정규분포 기본",
       "status": "ok",
       "flags": [],
       "fixed": 0
@@ -247,61 +238,88 @@
     {
       "subject": "확률과통계",
       "category": "수학",
-      "unit": "확률 · 킬러",
-      "topic": "확률 킬러",
+      "unit": "통계: 확률분포와 정규분포 · 심화",
+      "topic": "통계: 확률분포와 정규분포 심화",
+      "status": "ok",
+      "flags": [],
+      "fixed": 0
+    },
+    {
+      "subject": "확률과통계",
+      "category": "수학",
+      "unit": "통계: 확률분포와 정규분포 · 킬러",
+      "topic": "통계: 확률분포와 정규분포 킬러",
+      "status": "ok",
+      "flags": [],
+      "fixed": 1
+    },
+    {
+      "subject": "미적분",
+      "category": "수학",
+      "unit": "급수 · 기본",
+      "topic": "급수 기본",
+      "status": "ok",
+      "flags": [],
+      "fixed": 1
+    },
+    {
+      "subject": "미적분",
+      "category": "수학",
+      "unit": "급수 · 심화",
+      "topic": "급수 심화",
+      "status": "ok",
+      "flags": [],
+      "fixed": 0
+    },
+    {
+      "subject": "미적분",
+      "category": "수학",
+      "unit": "급수 · 킬러",
+      "topic": "급수 킬러",
+      "status": "ok",
+      "flags": [],
+      "fixed": 0
+    },
+    {
+      "subject": "기하",
+      "category": "수학",
+      "unit": "공간도형과 공간좌표 · 기본",
+      "topic": "공간도형과 공간좌표 기본",
       "status": "ok",
       "flags": [],
       "fixed": 2
     },
     {
-      "subject": "미적분",
+      "subject": "기하",
       "category": "수학",
-      "unit": "수열의 극한 · 기본",
-      "topic": "수열의 극한 기본",
+      "unit": "공간도형과 공간좌표 · 심화",
+      "topic": "공간도형과 공간좌표 심화",
       "status": "ok",
       "flags": [],
-      "fixed": 5
+      "fixed": 3
     },
     {
-      "subject": "미적분",
+      "subject": "기하",
       "category": "수학",
-      "unit": "수열의 극한 · 심화",
-      "topic": "수열의 극한 심화",
+      "unit": "공간도형과 공간좌표 · 킬러",
+      "topic": "공간도형과 공간좌표 킬러",
       "status": "ok",
       "flags": [],
-      "fixed": 1
+      "fixed": 2
     },
     {
-      "subject": "미적분",
-      "category": "수학",
-      "unit": "수열의 극한 · 킬러",
-      "topic": "수열의 극한 킬러",
+      "subject": "생활과윤리",
+      "category": "사탐",
+      "unit": "현대의 삶과 윤리 문제 접근 · 기본",
+      "topic": "현대의 삶과 윤리 문제 접근 기본",
       "status": "ok",
       "flags": [],
       "fixed": 0
     },
     {
-      "subject": "기하",
-      "category": "수학",
-      "unit": "평면벡터 · 기본",
-      "topic": "평면벡터 기본",
-      "status": "ok",
-      "flags": [],
-      "fixed": 0
-    },
-    {
-      "subject": "기하",
-      "category": "수학",
-      "unit": "평면벡터 · 심화",
-      "status": "fail",
-      "flags": [
-        "noData"
-      ]
-    },
-    {
-      "subject": "기하",
-      "category": "수학",
-      "unit": "평면벡터 · 킬러",
+      "subject": "생활과윤리",
+      "category": "사탐",
+      "unit": "현대의 삶과 윤리 문제 접근 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -310,34 +328,7 @@
     {
       "subject": "생활과윤리",
       "category": "사탐",
-      "unit": "평화와 다문화 윤리 · 기본",
-      "topic": "평화와 다문화 윤리 기본",
-      "status": "ok",
-      "flags": [],
-      "fixed": 0
-    },
-    {
-      "subject": "생활과윤리",
-      "category": "사탐",
-      "unit": "평화와 다문화 윤리 · 심화",
-      "status": "fail",
-      "flags": [
-        "noData"
-      ]
-    },
-    {
-      "subject": "생활과윤리",
-      "category": "사탐",
-      "unit": "평화와 다문화 윤리 · 킬러",
-      "topic": "평화와 다문화 윤리 킬러",
-      "status": "ok",
-      "flags": [],
-      "fixed": 0
-    },
-    {
-      "subject": "윤리와사상",
-      "category": "사탐",
-      "unit": "서양의 윤리 사상 · 기본",
+      "unit": "현대의 삶과 윤리 문제 접근 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -346,7 +337,7 @@
     {
       "subject": "윤리와사상",
       "category": "사탐",
-      "unit": "서양의 윤리 사상 · 심화",
+      "unit": "사회사상 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -355,7 +346,16 @@
     {
       "subject": "윤리와사상",
       "category": "사탐",
-      "unit": "서양의 윤리 사상 · 킬러",
+      "unit": "사회사상 · 심화",
+      "status": "fail",
+      "flags": [
+        "noData"
+      ]
+    },
+    {
+      "subject": "윤리와사상",
+      "category": "사탐",
+      "unit": "사회사상 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -364,16 +364,7 @@
     {
       "subject": "한국지리",
       "category": "사탐",
-      "unit": "생산과 소비 공간 · 기본",
-      "topic": "생산과 소비 공간 기본",
-      "status": "ok",
-      "flags": [],
-      "fixed": 0
-    },
-    {
-      "subject": "한국지리",
-      "category": "사탐",
-      "unit": "생산과 소비 공간 · 심화",
+      "unit": "인구와 지역 문제 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -382,7 +373,16 @@
     {
       "subject": "한국지리",
       "category": "사탐",
-      "unit": "생산과 소비 공간 · 킬러",
+      "unit": "인구와 지역 문제 · 심화",
+      "status": "fail",
+      "flags": [
+        "noData"
+      ]
+    },
+    {
+      "subject": "한국지리",
+      "category": "사탐",
+      "unit": "인구와 지역 문제 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -391,7 +391,7 @@
     {
       "subject": "세계지리",
       "category": "사탐",
-      "unit": "공존과 갈등의 세계 · 기본",
+      "unit": "세계화와 지역화 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -400,7 +400,7 @@
     {
       "subject": "세계지리",
       "category": "사탐",
-      "unit": "공존과 갈등의 세계 · 심화",
+      "unit": "세계화와 지역화 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -409,7 +409,7 @@
     {
       "subject": "세계지리",
       "category": "사탐",
-      "unit": "공존과 갈등의 세계 · 킬러",
+      "unit": "세계화와 지역화 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -418,7 +418,7 @@
     {
       "subject": "정치와법",
       "category": "사탐",
-      "unit": "사회생활과 법(형법·노동) · 기본",
+      "unit": "국제정치와 법 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -427,7 +427,7 @@
     {
       "subject": "정치와법",
       "category": "사탐",
-      "unit": "사회생활과 법(형법·노동) · 심화",
+      "unit": "국제정치와 법 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -436,7 +436,7 @@
     {
       "subject": "정치와법",
       "category": "사탐",
-      "unit": "사회생활과 법(형법·노동) · 킬러",
+      "unit": "국제정치와 법 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -445,7 +445,7 @@
     {
       "subject": "경제",
       "category": "사탐",
-      "unit": "국제무역과 환율 · 기본",
+      "unit": "경제생활과 합리적 선택 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -454,7 +454,7 @@
     {
       "subject": "경제",
       "category": "사탐",
-      "unit": "국제무역과 환율 · 심화",
+      "unit": "경제생활과 합리적 선택 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -463,7 +463,7 @@
     {
       "subject": "경제",
       "category": "사탐",
-      "unit": "국제무역과 환율 · 킬러",
+      "unit": "경제생활과 합리적 선택 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -472,7 +472,7 @@
     {
       "subject": "사회문화",
       "category": "사탐",
-      "unit": "현대사회의 변동 · 기본",
+      "unit": "사회문화 현상과 연구방법 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -481,7 +481,7 @@
     {
       "subject": "사회문화",
       "category": "사탐",
-      "unit": "현대사회의 변동 · 심화",
+      "unit": "사회문화 현상과 연구방법 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -490,7 +490,7 @@
     {
       "subject": "사회문화",
       "category": "사탐",
-      "unit": "현대사회의 변동 · 킬러",
+      "unit": "사회문화 현상과 연구방법 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -499,7 +499,7 @@
     {
       "subject": "동아시아사",
       "category": "사탐",
-      "unit": "오늘의 동아시아 · 기본",
+      "unit": "동아시아 세계의 형성 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -508,7 +508,7 @@
     {
       "subject": "동아시아사",
       "category": "사탐",
-      "unit": "오늘의 동아시아 · 심화",
+      "unit": "동아시아 세계의 형성 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -517,7 +517,7 @@
     {
       "subject": "동아시아사",
       "category": "사탐",
-      "unit": "오늘의 동아시아 · 킬러",
+      "unit": "동아시아 세계의 형성 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -526,7 +526,7 @@
     {
       "subject": "세계사",
       "category": "사탐",
-      "unit": "현대 세계 · 기본",
+      "unit": "문명의 발생과 고대 세계 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -535,7 +535,7 @@
     {
       "subject": "세계사",
       "category": "사탐",
-      "unit": "현대 세계 · 심화",
+      "unit": "문명의 발생과 고대 세계 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -544,7 +544,7 @@
     {
       "subject": "세계사",
       "category": "사탐",
-      "unit": "현대 세계 · 킬러",
+      "unit": "문명의 발생과 고대 세계 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -553,7 +553,7 @@
     {
       "subject": "물리학1",
       "category": "과탐",
-      "unit": "현대물리: 상대성·양자 · 기본",
+      "unit": "역학: 운동·힘·에너지 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -562,7 +562,7 @@
     {
       "subject": "물리학1",
       "category": "과탐",
-      "unit": "현대물리: 상대성·양자 · 심화",
+      "unit": "역학: 운동·힘·에너지 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -571,7 +571,7 @@
     {
       "subject": "물리학1",
       "category": "과탐",
-      "unit": "현대물리: 상대성·양자 · 킬러",
+      "unit": "역학: 운동·힘·에너지 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -580,7 +580,7 @@
     {
       "subject": "물리학2",
       "category": "과탐",
-      "unit": "파동과 빛의 성질 · 기본",
+      "unit": "평면 운동과 원운동 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -589,7 +589,7 @@
     {
       "subject": "물리학2",
       "category": "과탐",
-      "unit": "파동과 빛의 성질 · 심화",
+      "unit": "평면 운동과 원운동 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -598,7 +598,7 @@
     {
       "subject": "물리학2",
       "category": "과탐",
-      "unit": "파동과 빛의 성질 · 킬러",
+      "unit": "평면 운동과 원운동 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -607,7 +607,7 @@
     {
       "subject": "화학1",
       "category": "과탐",
-      "unit": "산화·환원과 중화반응 · 기본",
+      "unit": "화학의 언어: 몰과 화학식 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -616,7 +616,7 @@
     {
       "subject": "화학1",
       "category": "과탐",
-      "unit": "산화·환원과 중화반응 · 심화",
+      "unit": "화학의 언어: 몰과 화학식 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -625,7 +625,7 @@
     {
       "subject": "화학1",
       "category": "과탐",
-      "unit": "산화·환원과 중화반응 · 킬러",
+      "unit": "화학의 언어: 몰과 화학식 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -634,7 +634,7 @@
     {
       "subject": "화학2",
       "category": "과탐",
-      "unit": "화학 평형 · 기본",
+      "unit": "기체 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -643,7 +643,7 @@
     {
       "subject": "화학2",
       "category": "과탐",
-      "unit": "화학 평형 · 심화",
+      "unit": "기체 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -652,7 +652,7 @@
     {
       "subject": "화학2",
       "category": "과탐",
-      "unit": "화학 평형 · 킬러",
+      "unit": "기체 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -661,7 +661,7 @@
     {
       "subject": "생명과학1",
       "category": "과탐",
-      "unit": "유전 · 기본",
+      "unit": "생태계와 상호작용 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -670,7 +670,7 @@
     {
       "subject": "생명과학1",
       "category": "과탐",
-      "unit": "유전 · 심화",
+      "unit": "생태계와 상호작용 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -679,7 +679,7 @@
     {
       "subject": "생명과학1",
       "category": "과탐",
-      "unit": "유전 · 킬러",
+      "unit": "생태계와 상호작용 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -688,7 +688,7 @@
     {
       "subject": "생명과학2",
       "category": "과탐",
-      "unit": "진화와 계통 · 기본",
+      "unit": "세포의 특성과 물질대사 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -697,7 +697,7 @@
     {
       "subject": "생명과학2",
       "category": "과탐",
-      "unit": "진화와 계통 · 심화",
+      "unit": "세포의 특성과 물질대사 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -706,7 +706,7 @@
     {
       "subject": "생명과학2",
       "category": "과탐",
-      "unit": "진화와 계통 · 킬러",
+      "unit": "세포의 특성과 물질대사 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -715,7 +715,7 @@
     {
       "subject": "지구과학1",
       "category": "과탐",
-      "unit": "우주: 외계행성과 은하 · 기본",
+      "unit": "고체지구: 판구조와 지질 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -724,7 +724,7 @@
     {
       "subject": "지구과학1",
       "category": "과탐",
-      "unit": "우주: 외계행성과 은하 · 심화",
+      "unit": "고체지구: 판구조와 지질 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -733,7 +733,7 @@
     {
       "subject": "지구과학1",
       "category": "과탐",
-      "unit": "우주: 외계행성과 은하 · 킬러",
+      "unit": "고체지구: 판구조와 지질 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -742,7 +742,7 @@
     {
       "subject": "지구과학2",
       "category": "과탐",
-      "unit": "우주론 · 기본",
+      "unit": "지구의 형성과 지질조사 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -751,7 +751,7 @@
     {
       "subject": "지구과학2",
       "category": "과탐",
-      "unit": "우주론 · 심화",
+      "unit": "지구의 형성과 지질조사 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -760,7 +760,7 @@
     {
       "subject": "지구과학2",
       "category": "과탐",
-      "unit": "우주론 · 킬러",
+      "unit": "지구의 형성과 지질조사 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -769,7 +769,7 @@
     {
       "subject": "통합사회",
       "category": "통합사회",
-      "unit": "시장경제와 금융 · 기본",
+      "unit": "세계화와 미래사회 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -778,7 +778,7 @@
     {
       "subject": "통합사회",
       "category": "통합사회",
-      "unit": "시장경제와 금융 · 심화",
+      "unit": "세계화와 미래사회 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -787,7 +787,7 @@
     {
       "subject": "통합사회",
       "category": "통합사회",
-      "unit": "시장경제와 금융 · 킬러",
+      "unit": "세계화와 미래사회 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -796,7 +796,7 @@
     {
       "subject": "통합과학",
       "category": "통합과학",
-      "unit": "물질의 규칙성과 결합 · 기본",
+      "unit": "시스템과 상호작용: 역학·지구 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -805,7 +805,7 @@
     {
       "subject": "통합과학",
       "category": "통합과학",
-      "unit": "물질의 규칙성과 결합 · 심화",
+      "unit": "시스템과 상호작용: 역학·지구 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -814,7 +814,7 @@
     {
       "subject": "통합과학",
       "category": "통합과학",
-      "unit": "물질의 규칙성과 결합 · 킬러",
+      "unit": "시스템과 상호작용: 역학·지구 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
