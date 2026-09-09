@@ -1,4 +1,4 @@
-name: NEOUL auto-generate (all-subject, Opus primary)
+name: NEOUL auto-generate (all-subject, Opus 5 primary, model floor)
 on:
   schedule:
     - cron: '0 21 * * 0'   # 매주 월요일 06:00 KST (일 21:00 UTC)
@@ -28,7 +28,7 @@ jobs:
           npm init -y >/dev/null 2>&1 || true
           npm i playwright@1.47.2
           npx playwright install --with-deps chromium
-      - name: Generate all subjects (Opus 4.8 primary, KaTeX + inline SVG)
+      - name: Generate all subjects (Opus 5 effort-high primary, KaTeX + inline SVG)
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
