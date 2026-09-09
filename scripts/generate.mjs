@@ -16,18 +16,21 @@ const KBROWS = [];  // tutor_kb(RAG) sidecar: weekly concept -> learn tutor KB
 mkdirSync(OUT, { recursive: true });
 
 const MODELS = {
-  anthropic: process.env.ANTHROPIC_MODEL || 'claude-opus-4-8',
-  openai:    process.env.OPENAI_MODEL    || 'gpt-5.5',
-  gemini:    process.env.GEMINI_MODEL    || 'gemini-3.5-flash',
+  anthropic: process.env.ANTHROPIC_MODEL || 'claude-opus-5',            // MODEL FLOOR (BHTM constitution v17.0 art.9): Opus 5 + effort high
+  anthropic2: process.env.ANTHROPIC_MODEL_FALLBACK || 'claude-fable-5-1', // same-provider fallback, ABOVE the floor
+  openai:    process.env.OPENAI_MODEL    || '',                        // below-floor default removed (2026-09-09); opt-in via repo var only
+  gemini:    process.env.GEMINI_MODEL    || 'gemini-3.1-pro-preview',  // top-tier fallback only (no Flash-class models)
 };
 const KEYS = {
   anthropic: process.env.ANTHROPIC_API_KEY || '',
+  anthropic2: process.env.ANTHROPIC_API_KEY || '',
   openai:    process.env.OPENAI_API_KEY || '',
   gemini:    process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY || '',
 };
 
 // 품질 최우선(거버넌스: 전 부서 1순위 = Opus 4.8). 전 과목 주력 = anthropic, 나머지는 폴백만.
-const FALLBACK = ['anthropic', 'openai', 'gemini'];
+// MODEL FLOOR: Opus 5 (effort high) primary -> Fable 5.1 -> Gemini 3.1 Pro. Providers without a model or key are skipped.
+const FALLBACK = ['anthropic', 'anthropic2', 'gemini', 'openai'].filter(p => MODELS[p]);
 
 const SUBJECTS = [
   { cat:'국어', sub:'독서' }, { cat:'국어', sub:'문학' }, { cat:'국어', sub:'화법과작문' }, { cat:'국어', sub:'언어와매체' },
@@ -144,15 +147,15 @@ const LOG_URL = 'https://iwrblahmszuthemfrhmy.supabase.co/functions/v1/log-usage
 function logUsage(provider, model, inTok, outTok){
   try{ fetch(LOG_URL,{method:'POST',headers:{'content-type':'application/json','x-bhtm-log':'bhtm-usage-2026'},body:JSON.stringify({provider,model,feature:'free-dist-engine',input_tokens:inTok||0,output_tokens:outTok||0})}).catch(function(){}); }catch(e){}
 }
-async function callAnthropic(prompt, maxTok=20000) {
+async function callAnthropic(prompt, maxTok=20000, model=MODELS.anthropic) {
   const r = await fetch('https://api.anthropic.com/v1/messages', {
     method:'POST',
     headers:{ 'x-api-key':KEYS.anthropic, 'anthropic-version':'2023-06-01', 'content-type':'application/json' },
-    body: JSON.stringify({ model:MODELS.anthropic, max_tokens:maxTok, messages:[{role:'user',content:prompt}] })
+    body: JSON.stringify({ model:model, max_tokens:maxTok, output_config:{ effort:'high' }, messages:[{role:'user',content:prompt}] })
   });
   const j = await r.json();
   if (!r.ok) throw new Error('anthropic '+r.status+' '+JSON.stringify(j).slice(0,200));
-  logUsage('anthropic', MODELS.anthropic, j.usage&&j.usage.input_tokens, j.usage&&j.usage.output_tokens);
+  logUsage('anthropic', model, j.usage&&j.usage.input_tokens, j.usage&&j.usage.output_tokens);
   return j.content.map(c=>c.text||'').join('');
 }
 async function callOpenAI(prompt, maxTok=24000) {
@@ -174,7 +177,7 @@ async function callGemini(prompt, maxTok=24000) {
   logUsage('gemini', MODELS.gemini, j.usageMetadata&&j.usageMetadata.promptTokenCount, j.usageMetadata&&j.usageMetadata.candidatesTokenCount);
   return j.candidates[0].content.parts.map(p=>p.text||'').join('');
 }
-const CALL = { anthropic:callAnthropic, openai:callOpenAI, gemini:callGemini };
+const CALL = { anthropic:callAnthropic, anthropic2:(p,m)=>callAnthropic(p,m,MODELS.anthropic2), openai:callOpenAI, gemini:callGemini };
 
 function extractJSON(text){
   let t = text.trim().replace(/^```(json)?/i,'').replace(/```$/,'').trim();
