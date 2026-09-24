@@ -223,7 +223,7 @@ const KATEX_JS =
   '<script>window.addEventListener("load",function(){function done(){document.body.setAttribute("data-katex-done","1");}function render(){try{renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"$",right:"$",display:false}],throwOnError:false});}catch(e){}setTimeout(done,180);}var fam=["KaTeX_Main","KaTeX_Math","KaTeX_Size1","KaTeX_Size2","KaTeX_Size3","KaTeX_Size4","KaTeX_AMS","KaTeX_Caligraphic","KaTeX_Fraktur","KaTeX_SansSerif","KaTeX_Script","KaTeX_Typewriter"];if(document.fonts&&document.fonts.load){var ps=[];fam.forEach(function(f){["16px ","italic 16px ","bold 16px "].forEach(function(w){ps.push(document.fonts.load(w+f).catch(function(){}));});});Promise.all(ps).then(function(){return (document.fonts.ready||Promise.resolve()).catch(function(){});}).then(render);}else{setTimeout(render,700);}});</script>';
 
 const FOOT = `<div class="foot">너야(NEOYA) 무료 학습자료 · SKY 출신 교과 멘토 × AI 협업 출제<br>교육과정 성취기준 기반 새 창작(기출 지문·문항 미수록). 어떤 성적도 보장하지 않습니다. 학습 목적 제공·무단 상업적 재배포 금지.</div>`;
-const CTA = '<div class="box" style="text-align:center;margin-top:16px"><b>이 자료가 도움이 됐다면</b> — 너야(NEOYA)는 5회독 누적복습·AI 맞춤 학습으로 이어집니다. 무료 자료 더 보기 → <b>neoulai.com</b></div>';
+const CTA = '<div class="box" style="text-align:center;margin-top:16px"><b>이 자료가 도움이 됐다면</b> — 너야(NEOYA)는 5회독 누적복습·AI 맞춤 학습으로 이어집니다. 무료 자료 더 보기 → <b>neoya.kr</b></div>';
 const page = (title, tag, body) => `<!doctype html><html><head><meta charset="utf-8"><title>${title}</title>${CSS}</head><body><h1>${title}</h1><div class="tag">${tag}</div>${body}${CTA}${FOOT}${KATEX_JS}</body></html>`;
 
 let BROWSER = null;
