@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /* ============================================================
- * NEOUL Design System — ds-lint v1.0  (2026-07-25)
+ * NEOYA Design System — ds-lint v1.0  (2026-07-25)
  * 14항 린트를 "문서"에서 "실행되는 게이트"로 승격한 검사기.
  * 의존성 0 (Node 18+ 내장 모듈만 사용).
  *
@@ -19,7 +19,7 @@ import { join, extname, relative, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 /* 시스템별 팔레트 오버라이드: lint/palette.json 이 있으면 그 값을 쓴다.
-   → 스크립트 1벌로 NEOUL·BHTM 등 복수 디자인시스템을 검사한다. */
+   → 스크립트 1벌로 NEOYA·BHTM 등 복수 디자인시스템을 검사한다. */
 const __here = dirname(fileURLToPath(import.meta.url));
 const PALETTE_FILE = join(__here, 'palette.json');
 const PALETTE = existsSync(PALETTE_FILE) ? JSON.parse(readFileSync(PALETTE_FILE, 'utf8')) : null;
@@ -49,7 +49,7 @@ const ALLOWED_HEX = new Set([
 if (PALETTE?.allowedHex) { ALLOWED_HEX.clear(); for (const h of PALETTE.allowedHex) ALLOWED_HEX.add(h.toUpperCase()); }
 const GRADIENT_RE = PALETTE?.gradientPair
   ? new RegExp(PALETTE.gradientPair.join('|'), 'i')
-  : /--neoul-primary-deep|--brand-deep|#1A3A5C|--neoul-primary-mid|--brand-mid|#2B5F8B/i;
+  : /--neoya-primary-deep|--brand-deep|#1A3A5C|--neoya-primary-mid|--brand-mid|#2B5F8B/i;
 const SHADOW_RGB = PALETTE?.shadowRgb || ['26', '58', '92'];
 const ALLOWED_EXCEPT = PALETTE?.allowedPhrases || [];
 
@@ -223,7 +223,7 @@ function lintFile(file, root) {
       // 브랜드 면 판정 — 팔레트 override 가 있으면 그쪽 gradientPair 를 쓴다(다중 시스템 지원).
       const BRAND_VAR = PALETTE?.gradientPair
         ? GRADIENT_RE
-        : /--neoul-primary-(deep|mid)|--brand-(deep|mid)|--(deep|mid|light|d|o|s)\b|#1A3A5C|#2B5F8B|#A8C4DD/i;
+        : /--neoya-primary-(deep|mid)|--brand-(deep|mid)|--(deep|mid|light|d|o|s)\b|#1A3A5C|#2B5F8B|#A8C4DD/i;
       const ANGLES = PALETTE?.gradientAngles || ['135', '155', '160'];
       const ok = new RegExp(`\\b(${ANGLES.join('|')})deg`, 'i').test(bare) && BRAND_VAR.test(bare);
       // 진행바·미터 전용 축방향 선형 — 가로 90deg · 세로 180deg. 색은 Deep→Mid.
@@ -457,7 +457,7 @@ const warns = findings.filter(f => f.level === 'WARN');
 if (asJson) {
   console.log(JSON.stringify({ files: files.length, fail: fails.length, warn: warns.length, findings }, null, 2));
 } else {
-  console.log(`\nds-lint v1.0 — ${PALETTE?.system || 'NEOUL Design System'}`);
+  console.log(`\nds-lint v1.0 — ${PALETTE?.system || 'NEOYA Design System'}`);
   console.log(`검사 파일 ${files.length}개 · FAIL ${fails.length} · WARN ${warns.length}`
     + (baselined.length ? ` · BASE ${baselined.length}(승인된 잔여)` : '') + '\n');
   const byRule = {};

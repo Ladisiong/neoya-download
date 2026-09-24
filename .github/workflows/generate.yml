@@ -1,4 +1,4 @@
-name: NEOUL auto-generate (all-subject, Opus 5 primary, model floor)
+name: NEOYA auto-generate (all-subject, Opus 5 primary, model floor)
 on:
   schedule:
     - cron: '0 21 * * 0'   # 매주 월요일 06:00 KST (일 21:00 UTC)
@@ -11,7 +11,7 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: neoul-generate
+  group: neoya-generate
   cancel-in-progress: false
 jobs:
   generate:
@@ -40,7 +40,7 @@ jobs:
         run: node scripts/generate.mjs
       - name: Commit and push (Vercel auto-deploy)
         run: |
-          git config user.name "neoul-bot"
+          git config user.name "neoya-bot"
           git config user.email "bot@neoulai.com"
           git add frontend/materials frontend/materials.json frontend/qc_report.json frontend/tutor_kb.json
           git commit -m "chore(auto): materials $(date -u +%F)" || { echo "no change"; exit 0; }

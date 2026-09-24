@@ -1,6 +1,6 @@
 /**
  * ============================================================================
- *  너울 — 교육자료 배포 시스템 프론트엔드 로직
+ *  너야 — 교육자료 배포 시스템 프론트엔드 로직
  * ============================================================================
  *
  *  Copyright © 2026 김태민 (상표 출원번호 40-2026-0081306, 40-2026-0081307)
@@ -54,8 +54,8 @@ let fileData = {};
 let currentCategory = 'all';
 
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('🌊 너울 시스템 시작 (v2.7 JSONP복구 + 출원번호공식화)');
-  console.log('📜 저작권자: 김태민 · 상표 출원번호 40-2026-0081306, 40-2026-0081307');
+  console.log('🌊 너야 시스템 시작 (v2.8 브랜드 교체)');
+  console.log('📜 저작권자: 김태민');
   console.log('📚 학습자료: 김태민 본인 출제 교육 저작물');
   verifyApiUrl();                // 🆕 v2.7: API_URL 형식 자가 검증 (네트워크 호출 전 미리 감지)
   generateQRCode();              // ✅ QR 코드 우선 생성 (네트워크 무관, 즉시 렌더)
@@ -94,15 +94,15 @@ function generateQRCode() {
   const container = document.getElementById('qr-code-box');
   if (!container) return;
 
-  const TARGET_URL = 'https://neoul-download.vercel.app/';
+  const TARGET_URL = 'https://neoya-download.vercel.app/';
 
   // qrcode.js 로드 여부 검사
   if (typeof QRCode === 'undefined') {
     console.warn('⚠️ qrcode.js CDN 로드 실패 — fallback 표시');
     container.innerHTML = `
-      <div style="text-align:center; padding:16px; color:var(--neoul-text-secondary); font-size:0.85rem;">
+      <div style="text-align:center; padding:16px; color:var(--neoya-text-secondary); font-size:0.85rem;">
         QR 코드를 불러오지 못했습니다.<br>
-        직접 접속: <strong>neoul-download.vercel.app</strong>
+        직접 접속: <strong>neoya-download.vercel.app</strong>
       </div>
     `;
     return;
@@ -115,16 +115,16 @@ function generateQRCode() {
       text: TARGET_URL,
       width: 196,
       height: 196,
-      colorDark: '#0A3D62',     // SSoT 토큰 --neoul-deep-blue 와 동일 값
-      colorLight: '#FFFFFF',    // SSoT 토큰 --neoul-white 와 동일 값
+      colorDark: '#0A3D62',     // SSoT 토큰 --neoya-deep-blue 와 동일 값
+      colorLight: '#FFFFFF',    // SSoT 토큰 --neoya-white 와 동일 값
       correctLevel: QRCode.CorrectLevel.H  // 고에러정정 (모바일 카메라 인식 안정성)
     });
     console.log('✅ QR 코드 생성 완료:', TARGET_URL);
   } catch (err) {
     console.error('QR 코드 생성 오류:', err);
     container.innerHTML = `
-      <div style="text-align:center; padding:16px; color:var(--neoul-text-secondary); font-size:0.85rem;">
-        QR 생성 오류<br>직접 접속: neoul-download.vercel.app
+      <div style="text-align:center; padding:16px; color:var(--neoya-text-secondary); font-size:0.85rem;">
+        QR 생성 오류<br>직접 접속: neoya-download.vercel.app
       </div>
     `;
   }
@@ -172,7 +172,7 @@ async function loadFileList() {
   // Google Apps Script는 fetch 시 script.googleusercontent.com으로 리다이렉트되어
   // 브라우저 fetch가 차단됨. JSONP는 <script> 태그 로드 방식이라 리다이렉트 자동 따라감.
   return new Promise((resolve) => {
-    const callbackName = 'neoulCb_' + Date.now();
+    const callbackName = 'neoyaCb_' + Date.now();
     const script = document.createElement('script');
 
     // 안전장치: 응답 처리 후 정리
@@ -276,7 +276,7 @@ function renderFileItems(files, subjectName, type) {
   if (!files || files.length === 0) return '';
   return files.map(file => `
     <div class="file-item">
-      <span>${file.displayName} <small style="color: var(--neoul-text-secondary);">(${file.size || '-'})</small></span>
+      <span>${file.displayName} <small style="color: var(--neoya-text-secondary);">(${file.size || '-'})</small></span>
       <button class="download-btn" onclick="downloadFile('${file.id}', '${file.displayName}', '${subjectName}', '${type}')">
         📥 다운로드
       </button>
@@ -297,10 +297,10 @@ function setupCategoryTabs() {
 }
 
 async function downloadFile(fileId, fileName, category, type) {
-  console.log(`[너울] 다운로드 시작: ${fileName}`);
+  console.log(`[너야] 다운로드 시작: ${fileName}`);
 
   if (fileId.startsWith('demo-')) {
-    alert(`🌊 너울 데모 버전입니다.\n\n실제 자료는 Apps Script 배포 후 제공됩니다.\n\n저작권자: 김태민\n상표 출원번호: 40-2026-0081306, 40-2026-0081307\n학습자료: 김태민 본인 출제`);
+    alert(`🌊 너야 데모 버전입니다.\n\n실제 자료는 Apps Script 배포 후 제공됩니다.\n\n저작권자: 김태민\n학습자료: 김태민 본인 출제`);
     return;
   }
 
@@ -330,7 +330,7 @@ async function downloadFile(fileId, fileName, category, type) {
  */
 function recordDownloadViaJsonp(data) {
   return new Promise((resolve) => {
-    const callbackName = `_neoulCb_${Date.now()}_${Math.floor(Math.random() * 10000)}`;
+    const callbackName = `_neoyaCb_${Date.now()}_${Math.floor(Math.random() * 10000)}`;
     const params = new URLSearchParams({
       action: 'recordDownload',
       data: JSON.stringify(data),

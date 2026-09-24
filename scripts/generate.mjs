@@ -1,5 +1,5 @@
 /**
- * NEOUL 무료 학습자료 — 100% 무인 생성 엔진 v2 (품질 최우선)
+ * NEOYA 무료 학습자료 — 100% 무인 생성 엔진 v2 (품질 최우선)
  * 변경 핵심(v1 결함 4종 근본수정):
  *  1) 모델명 비노출  — PDF 표기에서 AI(provider)/v-auto 제거 → "SKY 멘토 × AI 협업 출제"만.
  *  2) 수식 렌더      — LibreOffice(JS 미실행) → Chromium(Playwright) 프린트 + KaTeX 렌더. raw LaTeX 제거.
@@ -46,7 +46,7 @@ const SUBJECTS = [
 const ONLY=(process.env.ONLY_SUBJECTS||'').split(',').map(x=>x.trim()).filter(Boolean);
 const RUN=ONLY.length?SUBJECTS.filter(s=>ONLY.includes(s.sub)):SUBJECTS;
 
-const PROMPT = (s, unit) => `당신은 대한민국 수능·내신 ${s.cat}(${s.sub}) 최고 출제·해설 집필 전문가입니다. 시중 최상위 문제집과 평가원 해설집 수준의 학습자료 1세트를 만드세요. 타깃 독자는 고3 1~2등급·재수생 상위권이다. 시대인재·대성 최상위 프리미엄 교재 수준으로 만들어 '무료 배포이지만 유료 교재보다 낫다'는 인상을 주어야 한다(화장품이 샘플에 최고 퀄리티를 넣는 전략과 동일—무료라고 퀄리티가 낮으면 실패한다). 이 자료의 궁극 목적은 학생이 감탄해 '너울(NEOUL)'로 유입되는 매개체가 되는 것이다.
+const PROMPT = (s, unit) => `당신은 대한민국 수능·내신 ${s.cat}(${s.sub}) 최고 출제·해설 집필 전문가입니다. 시중 최상위 문제집과 평가원 해설집 수준의 학습자료 1세트를 만드세요. 타깃 독자는 고3 1~2등급·재수생 상위권이다. 시대인재·대성 최상위 프리미엄 교재 수준으로 만들어 '무료 배포이지만 유료 교재보다 낫다'는 인상을 주어야 한다(화장품이 샘플에 최고 퀄리티를 넣는 전략과 동일—무료라고 퀄리티가 낮으면 실패한다). 이 자료의 궁극 목적은 학생이 감탄해 '너야(NEOYA)'로 유입되는 매개체가 되는 것이다.
 
 이번 자료의 단원(unit)은 「${unit}」 이다. 반드시 이 단원 범위 안에서만 개념·문항·해설을 구성하라(다른 단원 내용 혼입 금지).${s.sub==='미적분'?' ★미적분 특칙(대표님 지시, 필수): 삼각함수 관련 내용 전면 제외 — 삼각함수의 극한·미분·적분 및 sin·cos·tan 포함 문항 절대 금지, 지수·로그·다항·유리·무리함수 중심으로만 출제한다. 그리고 도형·그래프가 필요한 문항 전면 제외 — 인라인 <svg> 도형/그래프 없이 순수 대수·해석적으로 완결되는 문항만(넓이·부피·기하 해석 문제 배제).':''}${s.cat==='국어'&&s.sub==='문학'?' ★문학 특칙(대표님 지시, 필수): 문학 지문은 절대 자작하지 말고, 저작권 보호기간이 만료된(작가 사후 70년 경과·1962년 이전 사망) 실제 빈출·대표 작품의 원문을 정확히 인용한다(김소월·이육사·윤동주·한용운·정지용·현진건·김유정 등 근현대 및 정철·윤선도 등 고전 전체 가능. 백석 등 저작권 존속 현대작 금지). 작가·출처를 명시하고 지문 원문은 그대로 싣되 문항·선지·해설만 새로 창작한다.':''}
 
@@ -70,7 +70,7 @@ const PROMPT = (s, unit) => `당신은 대한민국 수능·내신 ${s.cat}(${s.
 - 개념요약은 <h3>소제목</h3>으로 구획하고 필요 시 <table>/<div class="box"> 사용. 해설편 각 풀이는 반드시 <div class="sol"> 안에 <div class="step"><b>Step 1.</b>…</div>을 단계마다 반복(줄글 금지)한 뒤 <div class="blk">…4블록…</div>.
 - 도형·그래프는 인라인 <svg>, 수식은 $ ... $ / $$ ... $$.`;
 
-// ── 수학 전용(대표님 지시): 개념요약 1 + 기본/심화/킬러 각 8문항(너울7+기출8) ──
+// ── 수학 전용(대표님 지시): 개념요약 1 + 기본/심화/킬러 각 8문항(너야7+기출8) ──
 const MATH_CONCEPT = (s, unit) => `당신은 대한민국 수능 수학(${s.sub}) 최고 개념서 집필 전문가입니다. 단원 「${unit}」의 개념요약 1편을 만드세요. 무료 배포이지만 유료 교재보다 낫다는 인상(미끼상품 최고품질).
 [규칙]
 1. 일타강사식: 어려운 개념도 학생이 이해하기 쉬운 용어와 구체적 예시로 풀어 설명한다(존댓말·경어체 필수, 반말 금지). 정의·정리·공식은 왜 성립하는지 직관과 간단한 예를 함께 든다. 최근 수능·평가원에 출제되지 않는 지엽·폐지 개념은 제외하고 최신 핵심 개념 위주로 한다.
@@ -80,7 +80,7 @@ const MATH_CONCEPT = (s, unit) => `당신은 대한민국 수능 수학(${s.sub}
 [출력] 오직 JSON 하나만(코드펜스 금지): {"topic":"핵심 소주제 한 줄(15자 내외)","concept_html":"개념요약 본문 HTML(<html>/<body> 없이)"}`;
 
 const MATH_SET = (s, unit, diff) => `당신은 대한민국 수능 수학(${s.sub}) 최고 출제·해설 전문가입니다. 단원 「${unit}」의 [${diff}] 난이도 문제 세트(총 8문항)를 만드세요. 시대인재·대성 최상위 프리미엄 N제 수준으로, 무료지만 유료보다 낫게 만든다(미끼상품—무료라고 절대 쉽게 내지 말 것).
-[구성] 총 8문항 전부 너울 자체창작 — 완전히 새로 창작한 [${diff}] 난이도 문항(지문·수치·선지·도형 전부 새로 만든다). 기출 원문 재수록·부분치환 절대 금지(저작권). 평가원 기출의 유형·난이도·평가요소만 벤치마킹한다.
+[구성] 총 8문항 전부 너야 자체창작 — 완전히 새로 창작한 [${diff}] 난이도 문항(지문·수치·선지·도형 전부 새로 만든다). 기출 원문 재수록·부분치환 절대 금지(저작권). 평가원 기출의 유형·난이도·평가요소만 벤치마킹한다.
 [난이도 ${diff}] ${diff==='기본'?'평가원 4점 준킬러급 — 2~3개 개념 통합·조건 해석·역방향 사고. 단순 대입·생기초 유형 금지.':diff==='심화'?'평가원 최상위 4점 킬러급(21·22·29·30번급) — 발상 전환·다단계 추론·경우 나눔.':'상위 1%만 푸는 진짜 킬러 — 수능 만점 방어선. 비표준 발상 대전환+다단계 추론+숨은 구조 통찰이 동시에 필요.'}
 [규칙]
 1. 각 문항은 <div class="q"><span class="no${diff==='기본'?'':diff==='심화'?' adv':' killer'}">[${diff}] N</span> …</div> 구조. 배점(점수·N점)은 절대 표기하지 않고 [${diff}]만 표기.
@@ -122,7 +122,7 @@ const CONCEPT_G = (s, unit) => `당신은 대한민국 수능·내신 ${s.cat}($
 [출력] 오직 JSON 하나만(코드펜스 금지): {"topic":"핵심 소주제 한 줄(15자 내외)","concept_html":"개념요약 본문 HTML(<html>/<body> 없이)"}`;
 
 const SET_G = (s, unit, diff) => `당신은 대한민국 수능·내신 ${s.cat}(${s.sub}) 최고 출제·해설 전문가입니다. 단원 「${unit}」의 [${diff}] 난이도 문제 세트(총 8문항)를 만드세요. 시대인재·대성 최상위 프리미엄 수준으로 무료지만 유료보다 낫게(미끼상품—절대 쉽게 내지 말 것). 타깃=고3 1~2등급·재수 상위권. 이 단원 범위 안에서만.${SUBJ_NOTE(s)}
-[구성] 총 8문항 전부 너울 자체창작(지문·자료·수치·선지·도형 전부 새로). 기출 원문 재수록·부분치환 절대 금지(저작권), 평가원 유형·난이도·평가요소만 벤치마킹.
+[구성] 총 8문항 전부 너야 자체창작(지문·자료·수치·선지·도형 전부 새로). 기출 원문 재수록·부분치환 절대 금지(저작권), 평가원 유형·난이도·평가요소만 벤치마킹.
 [난이도 ${diff}] ${diff==='기본'?'평가원 4점 준킬러급 — 2~3개 개념 통합·조건/자료 해석·역방향 사고. 단순 대입·단순 암기확인·생기초 금지.':diff==='심화'?'평가원 최상위 4점 킬러급(21·22·29·30번급) — 발상 전환·다단계 추론·경우 나눔·자료 종합.':'상위 1%만 푸는 진짜 킬러 — 수능 만점 방어선·최상단 변별. 비표준 발상 대전환+다단계 추론+숨은 구조 통찰이 동시에 필요.'}
 [규칙]
 1. 각 문항 <div class="q"><span class="no${diff==='기본'?'':diff==='심화'?' adv':' killer'}">[${diff}] N</span> …</div>. 배점(점수·N점) 절대 금지, [${diff}]만 표기.
@@ -222,8 +222,8 @@ const KATEX_JS =
   '<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>' +
   '<script>window.addEventListener("load",function(){function done(){document.body.setAttribute("data-katex-done","1");}function render(){try{renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"$",right:"$",display:false}],throwOnError:false});}catch(e){}setTimeout(done,180);}var fam=["KaTeX_Main","KaTeX_Math","KaTeX_Size1","KaTeX_Size2","KaTeX_Size3","KaTeX_Size4","KaTeX_AMS","KaTeX_Caligraphic","KaTeX_Fraktur","KaTeX_SansSerif","KaTeX_Script","KaTeX_Typewriter"];if(document.fonts&&document.fonts.load){var ps=[];fam.forEach(function(f){["16px ","italic 16px ","bold 16px "].forEach(function(w){ps.push(document.fonts.load(w+f).catch(function(){}));});});Promise.all(ps).then(function(){return (document.fonts.ready||Promise.resolve()).catch(function(){});}).then(render);}else{setTimeout(render,700);}});</script>';
 
-const FOOT = `<div class="foot">너울(NEOUL) 무료 학습자료 · SKY 출신 교과 멘토 × AI 협업 출제<br>교육과정 성취기준 기반 새 창작(기출 지문·문항 미수록). 어떤 성적도 보장하지 않습니다. 학습 목적 제공·무단 상업적 재배포 금지.</div>`;
-const CTA = '<div class="box" style="text-align:center;margin-top:16px"><b>이 자료가 도움이 됐다면</b> — 너울(NEOUL)은 5회독 누적복습·AI 맞춤 학습으로 이어집니다. 무료 자료 더 보기 → <b>neoulai.com</b></div>';
+const FOOT = `<div class="foot">너야(NEOYA) 무료 학습자료 · SKY 출신 교과 멘토 × AI 협업 출제<br>교육과정 성취기준 기반 새 창작(기출 지문·문항 미수록). 어떤 성적도 보장하지 않습니다. 학습 목적 제공·무단 상업적 재배포 금지.</div>`;
+const CTA = '<div class="box" style="text-align:center;margin-top:16px"><b>이 자료가 도움이 됐다면</b> — 너야(NEOYA)는 5회독 누적복습·AI 맞춤 학습으로 이어집니다. 무료 자료 더 보기 → <b>neoulai.com</b></div>';
 const page = (title, tag, body) => `<!doctype html><html><head><meta charset="utf-8"><title>${title}</title>${CSS}</head><body><h1>${title}</h1><div class="tag">${tag}</div>${body}${CTA}${FOOT}${KATEX_JS}</body></html>`;
 
 let BROWSER = null;

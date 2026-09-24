@@ -1,20 +1,20 @@
 /**
  * ============================================================================
- *  너울 — 교육자료 배포 시스템
+ *  너야 — 교육자료 배포 시스템
  * ============================================================================
  *
- *  프로젝트명    : 너울
+ *  프로젝트명    : 너야
  *  용도         : 교육용 소프트웨어 · 교육자료 배포업
  *  저작권자      : 김태민
  *  상표 출원인    : 김태민
  *  상표 출원번호  : 40-2026-0081306, 40-2026-0081307 (지정상품 9류 / 지정서비스 41류)
- *  상표 표장     : 너울 (국문 문자 상표)
+ *  상표 표장     : 너야 (국문 문자 상표)
  *  버전         : 1.1.0 (v2.2 정합화)
  *  최초 공개일    : 2026-04-24
  *  라이선스      : © 2026 김태민. All rights reserved.
  *
  *  본 소프트웨어는 대한민국 저작권법에 의해 보호되는 김태민 개인의 저작물이며,
- *  '너울' 상표로 교육자료 배포 서비스에 실제 사용되고 있음.
+ *  '너야' 상표로 교육자료 배포 서비스에 실제 사용되고 있음.
  *
  * ============================================================================
  *  학습자료 운영 형태 (출원인 단독 창작 입증)
@@ -31,7 +31,7 @@
  *
  *  2) 한국사 (단일 통합본)
  *     - 핵심용어 및 사건정리 통합본 1개 파일 (회차·해설 분리 없음)
- *     - 파일명: 너울_한국사_핵심용어및사건정리.pdf
+ *     - 파일명: 너야_한국사_핵심용어및사건정리.pdf
  *     - 폴더 구조: 기타/한국사/ 직접 파일 구조
  *
  *  3) 경제이론요약집 (단일 통합본)
@@ -50,13 +50,13 @@
 // ⚠️ D-3 작업 시 본인의 실제 ID로 교체 필수.
 // 깃허브 공개 코드에는 플레이스홀더 상태로만 푸시하고,
 // Apps Script 편집기에서만 실제 값을 사용하세요. (보안 가이드라인)
-const FOLDER_ID = '1WqHImkxvkozJnnZnJi9T0vsFkLsUrvjb'; // 너울 전용 구글 드라이브 폴더 ID
-const SPREADSHEET_ID = '1uy96xvIUH9xroouvnYG_Rj3TNx8dnjPrGjwsGbQVMJg'; // 너울 다운로드 로그 시트 ID
-const BRAND_NAME = '너울';
+const FOLDER_ID = '1WqHImkxvkozJnnZnJi9T0vsFkLsUrvjb'; // 너야 전용 구글 드라이브 폴더 ID
+const SPREADSHEET_ID = '1uy96xvIUH9xroouvnYG_Rj3TNx8dnjPrGjwsGbQVMJg'; // 너야 다운로드 로그 시트 ID
+const BRAND_NAME = '너야';
 const COPYRIGHT_HOLDER = '김태민';
 const TRADEMARK_APPLICATION = '40-2026-0081306, 40-2026-0081307';
 
-// 과목별 설정 (너울 학습자료 체계 - 김태민 본인 출제)
+// 과목별 설정 (너야 학습자료 체계 - 김태민 본인 출제)
 const SUBJECTS = {
   // 사회탐구
   korean_geography: { name: '한국지리', category: '사회탐구' },
@@ -186,7 +186,7 @@ function jsonpResponse(obj, callback) {
 
 /**
  * 브랜드 정보 반환 (상표 사용 증거용)
- * 이 엔드포인트는 '너울' 국문 상표가 교육용 소프트웨어에
+ * 이 엔드포인트는 '너야' 국문 상표가 교육용 소프트웨어에
  * 실제 사용되고 있음을 확인할 수 있는 상표 증거 엔드포인트입니다.
  */
 function getBrandInfo() {
@@ -209,7 +209,7 @@ function getBrandInfo() {
       problems_separated: '[과목]/문제집/ + [과목]/정답지/ (사회탐구·과학탐구)',
       direct_files: '[과목]/ (한국사·경제이론요약집)'
     },
-    description: '너울은 대한민국 고등학생·재수생을 위한 수능 학습자료 배포 시스템이며, 배포되는 모든 문제집·해설·요약집은 저작권자 김태민이 직접 출제·집필한 교육 저작물입니다.'
+    description: '너야는 대한민국 고등학생·재수생을 위한 수능 학습자료 배포 시스템이며, 배포되는 모든 문제집·해설·요약집은 저작권자 김태민이 직접 출제·집필한 교육 저작물입니다.'
   };
 }
 
@@ -220,7 +220,7 @@ function getBrandInfo() {
 function getFileList() {
   // ⚡ 캐시 조회 — 캐시 히트 시 즉시 반환 (응답 7초 → 1초 이내)
   const cache = CacheService.getScriptCache();
-  const cached = cache.get('neoul_fileList_v1');
+  const cached = cache.get('neoya_fileList_v1');
   if (cached) {
     console.log(`⚡ [${BRAND_NAME}] 캐시 히트 — 즉시 응답`);
     return JSON.parse(cached);
@@ -302,7 +302,7 @@ function getFileList() {
     };
 
     // ⚡ 캐시 저장 (10분 = 600초) — 다음 요청부터 1초 이내 응답
-    cache.put('neoul_fileList_v1', JSON.stringify(response), 600);
+    cache.put('neoya_fileList_v1', JSON.stringify(response), 600);
     console.log(`💾 [${BRAND_NAME}] 응답 캐싱 완료 (10분 유효)`);
 
     return response;
@@ -377,7 +377,7 @@ function recordDownload(downloadData) {
     console.log(`✅ [${BRAND_NAME}] 다운로드 기록: ${downloadData.fileName}`);
 
     // ⚡ 다운로드 기록 시 stats 캐시 즉시 무효화 (다음 호출에 최신 통계 반영)
-    CacheService.getScriptCache().remove('neoul_stats_v1');
+    CacheService.getScriptCache().remove('neoya_stats_v1');
   } catch (error) {
     console.error('❌ 다운로드 기록 저장 오류:', error);
   }
@@ -388,8 +388,8 @@ function recordDownload(downloadData) {
 // ========================================
 function clearCache() {
   const cache = CacheService.getScriptCache();
-  cache.remove('neoul_fileList_v1');
-  cache.remove('neoul_stats_v1');
+  cache.remove('neoya_fileList_v1');
+  cache.remove('neoya_stats_v1');
   console.log(`🔄 [${BRAND_NAME}] 캐시 강제 초기화 완료 — 다음 호출 시 Drive에서 새로 조회`);
   return { success: true, message: '캐시 초기화 완료' };
 }
@@ -397,7 +397,7 @@ function clearCache() {
 function getDownloadStats() {
   // ⚡ 캐시 조회 (1분 짧은 캐시 — 통계는 비교적 자주 갱신)
   const cache = CacheService.getScriptCache();
-  const cached = cache.get('neoul_stats_v1');
+  const cached = cache.get('neoya_stats_v1');
   if (cached) return JSON.parse(cached);
 
   try {
@@ -405,7 +405,7 @@ function getDownloadStats() {
     const lastRow = sheet.getLastRow();
     if (lastRow <= 1) {
       const empty = { totalDownloads: 0, todayDownloads: 0, thisWeekDownloads: 0, thisMonthDownloads: 0 };
-      cache.put('neoul_stats_v1', JSON.stringify(empty), 60);
+      cache.put('neoya_stats_v1', JSON.stringify(empty), 60);
       return empty;
     }
     const totalDownloads = lastRow - 1;
@@ -432,7 +432,7 @@ function getDownloadStats() {
     };
 
     // ⚡ 캐시 저장 (60초 = 1분)
-    cache.put('neoul_stats_v1', JSON.stringify(response), 60);
+    cache.put('neoya_stats_v1', JSON.stringify(response), 60);
     return response;
   } catch (error) {
     console.error('❌ 통계 조회 오류:', error);

@@ -1,7 +1,7 @@
 /**
- * NEOUL 본사 OS — 메일 → 할일 백로그 워커 (5분 무인)
+ * NEOYA 본사 OS — 메일 → 할일 백로그 워커 (5분 무인)
  * 3계정(개인 Gmail·회사 Workspace·네이버) IMAP fetch → 8카테고리 분류 →
- * 액션 필요한 메일만(gov·neoul·fin·legal·edu·sec) Supabase os_backlog upsert.
+ * 액션 필요한 메일만(gov·neoya·fin·legal·edu·sec) Supabase os_backlog upsert.
  * dedup=message-id(thread_id unique, ON CONFLICT DO NOTHING → 재등록·완료상태 보존).
  * 본문 미저장(subject·sender·category·priority만) — 개인정보 최소수집.
  */
@@ -24,10 +24,10 @@ const RULES = [
   ['legal', /(상표|특허|저작권|계약서|법률|변리사|법무|소송|내용증명|kipris|특허청|출원|등록결정|의견제출)/i],
   ['fin',   /(세금|부가세|종합소득세|종소세|법인세|계좌|이체|결제|카드 승인|청구|홈택스|hometax|세무|인보이스|invoice|정산|입금|출금|세금계산서|급여)/i],
   ['edu',   /(대입|수능|입시|모의고사|강의|인강|학원|잇올|여주캠프|교재|성적|원서|수시|정시|학종|멘토링)/i],
-  ['neoul', /(너울|neoul|5회독|왕중왕전|supabase|vercel|가비아|gabia|도메인 갱신|배포 실패|deploy failed)/i],
+  ['neoya', /(너야|neoya|5회독|왕중왕전|supabase|vercel|가비아|gabia|도메인 갱신|배포 실패|deploy failed)/i],
   ['news',  /(뉴스레터|newsletter|매거진|magazine|digest|weekly|구독|unsubscribe|수신거부|프로모션|promotion|할인|세일|\bsale\b|이벤트 안내|광고)/i],
 ];
-const ACTIONABLE = new Set(['sec', 'gov', 'legal', 'fin', 'edu', 'neoul']); // news·etc 제외
+const ACTIONABLE = new Set(['sec', 'gov', 'legal', 'fin', 'edu', 'neoya']); // news·etc 제외
 
 function classify(text) {
   for (const [cat, re] of RULES) if (re.test(text)) return cat;

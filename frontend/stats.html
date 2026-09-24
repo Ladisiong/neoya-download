@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="robots" content="noindex,nofollow" />
-<title>너울 무료배포 · 리드 실시간 대시보드</title>
+<title>너야 무료배포 · 리드 실시간 대시보드</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
@@ -44,7 +44,7 @@
 </head>
 <body>
 <header><div class="wrap">
-  <h1>너울 · 무료배포 리드 대시보드</h1>
+  <h1>너야 · 무료배포 리드 대시보드</h1>
   <span class="live"><span class="dot"></span><span id="liveTxt">실시간 · 20초마다 자동 갱신</span></span>
 </div></header>
 
@@ -75,7 +75,7 @@
 
 <script>
   var APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzsVNBCcCwLMavq8gcgYAx8p3ss5Xj9vue3vRmqeUziGIqnwySjZ_uK5gk-hlkrfKGl/exec";
-  var KEY_STORE = "neoul_stats_key";
+  var KEY_STORE = "neoya_stats_key";
   var key = sessionStorage.getItem(KEY_STORE) || "";
   var timer = null;
 
@@ -98,7 +98,7 @@
     });
   }
 
-  window.__neoulStats = function(res){
+  window.__neoyaStats = function(res){
     if(!res || !res.ok){
       if(res && res.error==='unauthorized'){ sessionStorage.removeItem(KEY_STORE); showGate('키가 올바르지 않습니다.'); return; }
       document.getElementById('foot').textContent='집계를 불러오지 못했습니다. 잠시 후 다시 시도됩니다.'; return;
@@ -129,7 +129,7 @@
     // 서버리스 프록시(same-origin) — 다계정 /u/N/ 리다이렉트 우회.
     fetch('/api/leadstats?key='+encodeURIComponent(key)+'&t='+Date.now(),{cache:'no-store'})
       .then(function(r){ return r.json(); })
-      .then(function(res){ window.__neoulStats(res); })
+      .then(function(res){ window.__neoyaStats(res); })
       .catch(function(){ document.getElementById('foot').textContent='집계 연결 실패(재시도 예정).'; });
   }
   function startDash(){

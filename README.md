@@ -1,18 +1,18 @@
-# 너울 — 교육자료 배포 시스템
+# 너야 — 교육자료 배포 시스템
 
-> **오늘의 한 물결이, 내일의 너울이 된다**
+> **강의는 누구나. 잡는 건, 너야.**
 >
-> *"Everything, new again." — 너울 · NEO + UL (New + All)*
+> *"Everything, new again." — 너야 · NEO + UL (New + All)*
 
-![너울 로고](./assets/neoul-logo-horizontal-tagline.png)
+![너야 로고](./assets/neoya-logo-horizontal-tagline.png)
 
 ---
 
 ## 📌 프로젝트 개요
 
-**너울**은 대한민국 고등학생·재수생을 위한 **수능 학습자료 배포 시스템**입니다. 사회탐구·과학탐구·한국사 등 19개 과목의 문제집·정답지를 구글 드라이브와 연동하여 실시간으로 배포합니다.
+**너야**은 대한민국 고등학생·재수생을 위한 **수능 학습자료 배포 시스템**입니다. 사회탐구·과학탐구·한국사 등 19개 과목의 문제집·정답지를 구글 드라이브와 연동하여 실시간으로 배포합니다.
 
-본 시스템은 **김태민** 개인이 창작·개발한 교육용 소프트웨어이며, **'너울' 상표**로 실제 운영되고 있는 **교육자료 배포업** 서비스의 핵심 구성요소입니다.
+본 시스템은 **김태민** 개인이 창작·개발한 교육용 소프트웨어이며, **'너야' 상표**로 실제 운영되고 있는 **교육자료 배포업** 서비스의 핵심 구성요소입니다.
 
 ### 🎓 배포 학습자료의 출처
 
@@ -35,9 +35,9 @@
 
 | 항목 | 내용 |
 |------|------|
-| **브랜드명** | 너울 (국문 문자 상표) |
+| **브랜드명** | 너야 (국문 문자 상표) |
 | **상표 유형** | 국문 문자 상표 단독 출원 |
-| **슬로건** | 오늘의 한 물결이, 내일의 너울이 된다 |
+| **슬로건** | 강의는 누구나. 잡는 건, 너야. |
 | **저작권자 · 상표 출원인** | 김태민 |
 | **상표 출원번호** | 40-2026-0081306, 40-2026-0081307 |
 | **지정상품 (9류)** | 교육용 소프트웨어, 내려받기 가능한 전자문서, 전자학습지, 데이터베이스 SW, 문서관리 SW |
@@ -63,7 +63,7 @@
 - 일간·주간·월간 통계 대시보드
 - 과목별·회차별 인기도 분석
 
-### 3. 너울 학습자료 체계 (전체 김태민 본인 출제)
+### 3. 너야 학습자료 체계 (전체 김태민 본인 출제)
 
 | 카테고리 | 과목 |
 |---------|------|
@@ -85,10 +85,10 @@
 
 ## 🚀 배포 URL
 
-- **깃허브 저장소**: https://github.com/Ladisiong/neoul-download
-- **너울 학습자료 배포 시스템 (Vercel)**: `https://neoul-download.vercel.app`
+- **깃허브 저장소**: https://github.com/Ladisiong/neoya-download
+- **너야 학습자료 배포 시스템 (Vercel)**: `https://neoya-download.vercel.app`
 - **Apps Script 웹앱 엔드포인트**: 본인의 실제 URL은 보안상 README에 미공개 (Apps Script 편집기 + Vercel 환경변수에서만 보관)
-- **공식 유튜브 채널**: `https://youtube.com/@너울-공식` *(D-2 개설 후 업데이트)*
+- **공식 유튜브 채널**: `https://youtube.com/@너야-공식` *(D-2 개설 후 업데이트)*
 
 > 🔒 **보안 가이드라인**: Apps Script 웹앱 URL과 Drive Folder ID, Spreadsheet ID는 본 저장소가 Public이므로 코드에는 플레이스홀더만 표기되어 있습니다. 실제 운영 값은 Apps Script 편집기와 Vercel 환경변수에서만 보관합니다.
 
@@ -99,28 +99,28 @@
 ## 📂 프로젝트 구조
 
 ```
-neoul-download/
+neoya-download/
 ├── README.md                                    # 본 문서 (브랜드·상표 정보)
 ├── LICENSE                                      # 저작권 고지 (김태민)
 ├── apps_script/
 │   └── Code.gs                                  # Google Apps Script 백엔드
 ├── frontend/
-│   ├── index.html                               # 메인 페이지 (국문 너울 + 영문 태그라인)
+│   ├── index.html                               # 메인 페이지 (국문 너야 + 영문 태그라인)
 │   ├── app.js                                   # 파일 다운로드 로직
 │   └── assets/                                  # 프론트엔드 참조용 로고 미러 (8종)
-│       ├── neoul-logo-horizontal.png + .svg
-│       ├── neoul-logo-horizontal-tagline.png + .svg
-│       ├── neoul-mark-square.png + .svg
-│       └── neoul-mark-square-tagline.png + .svg
+│       ├── neoya-logo-horizontal.png + .svg
+│       ├── neoya-logo-horizontal-tagline.png + .svg
+│       ├── neoya-mark-square.png + .svg
+│       └── neoya-mark-square-tagline.png + .svg
 ├── assets/                                      # 로고 원본 (8종 = PNG 4 + SVG 4)
-│   ├── neoul-logo-horizontal.png                # 수평형 로고 (심볼 + 한글 너울)
-│   ├── neoul-logo-horizontal.svg                # 수평형 로고 SVG 벡터 원본
-│   ├── neoul-logo-horizontal-tagline.png        # 수평형 로고 + 태그라인 (공식)
-│   ├── neoul-logo-horizontal-tagline.svg        # 수평형 + 태그라인 SVG 벡터 원본
-│   ├── neoul-mark-square.png                    # 정사각 마크 (앱 아이콘·프로필)
-│   ├── neoul-mark-square.svg                    # 정사각 마크 SVG 벡터 원본
-│   ├── neoul-mark-square-tagline.png            # 정사각 마크 + 태그라인
-│   └── neoul-mark-square-tagline.svg            # 정사각 + 태그라인 SVG 벡터 원본
+│   ├── neoya-logo-horizontal.png                # 수평형 로고 (심볼 + 한글 너야)
+│   ├── neoya-logo-horizontal.svg                # 수평형 로고 SVG 벡터 원본
+│   ├── neoya-logo-horizontal-tagline.png        # 수평형 로고 + 태그라인 (공식)
+│   ├── neoya-logo-horizontal-tagline.svg        # 수평형 + 태그라인 SVG 벡터 원본
+│   ├── neoya-mark-square.png                    # 정사각 마크 (앱 아이콘·프로필)
+│   ├── neoya-mark-square.svg                    # 정사각 마크 SVG 벡터 원본
+│   ├── neoya-mark-square-tagline.png            # 정사각 마크 + 태그라인
+│   └── neoya-mark-square-tagline.svg            # 정사각 + 태그라인 SVG 벡터 원본
 └── evidence/                                    # 상표 증거 자료 (변리사 제출용)
     ├── 04-4_학습자료_저작권_자가고지서_v2.2.pdf  # 자가 고지서 PDF (서명 필요)
     ├── 04-4_학습자료_저작권_자가고지서_원본.html  # PDF 편집 추적용 HTML 원본
@@ -134,7 +134,7 @@ neoul-download/
 
 ## 🎨 브랜드 디자인 시스템
 
-### 컬러 시스템 (너울 SSoT)
+### 컬러 시스템 (너야 SSoT)
 
 | 이름 | HEX | 용도 |
 |------|------|------|
@@ -153,19 +153,19 @@ neoul-download/
 
 ---
 
-## 📖 너울의 브랜드 서사
+## 📖 너야의 브랜드 서사
 
-> '너울'은 바다의 크고 넓은 파도, 거대한 흐름을 뜻하는 순우리말입니다.
+> '너야'은 바다의 크고 넓은 파도, 거대한 흐름을 뜻하는 순우리말입니다.
 > 잔잔한 물결 하나로는 아무것도 바꾸지 못합니다.
-> 그러나 그 물결이 쌓이고 쌓여 너울이 될 때, 누구도 막을 수 없는 변화가 시작됩니다.
+> 그러나 그 물결이 쌓이고 쌓여 너야가 될 때, 누구도 막을 수 없는 변화가 시작됩니다.
 
-### 너울 · NEO + UL (New + All)
+### 너야 · NEO + UL (New + All)
 
-'너울'이라는 이름 속에는 또 하나의 의미가 숨어 있습니다. **NEO**는 '새로움'을, **UL**은 'All'을 뜻합니다. 모든 것을 새롭게 — **"Everything, new again."** 이것이 너울이 추구하는 교육의 본질입니다. 한글의 물결과 영문의 혁신이 만나는 브랜드 서사입니다.
+'너야'이라는 이름 속에는 또 하나의 의미가 숨어 있습니다. **NEO**는 '새로움'을, **UL**은 'All'을 뜻합니다. 모든 것을 새롭게 — **"Everything, new again."** 이것이 너야가 추구하는 교육의 본질입니다. 한글의 물결과 영문의 혁신이 만나는 브랜드 서사입니다.
 
 ### 철학적 뿌리
 
-너울의 5회독 누적 철학은 주자학의 **활연관통(豁然貫通)** — '작은 배움이 쌓이다 어느 순간 막혔던 이치가 뚫려 큰 흐름이 된다'는 조선 교육이념에 뿌리를 둡니다. 율곡 이이의 **격몽요결(擊蒙要訣)** — '어리석음을 깨는 첫걸음' — 과 현대 인지과학의 **에빙하우스 망각곡선**이 만나는 지점에서, 너울의 5회독 시스템이 시작됩니다.
+너야의 5회독 누적 철학은 주자학의 **활연관통(豁然貫通)** — '작은 배움이 쌓이다 어느 순간 막혔던 이치가 뚫려 큰 흐름이 된다'는 조선 교육이념에 뿌리를 둡니다. 율곡 이이의 **격몽요결(擊蒙要訣)** — '어리석음을 깨는 첫걸음' — 과 현대 인지과학의 **에빙하우스 망각곡선**이 만나는 지점에서, 너야의 5회독 시스템이 시작됩니다.
 
 ---
 
@@ -189,8 +189,8 @@ neoul-download/
 ### 2. 프론트엔드 호스팅
 
 ```
-git clone https://github.com/Ladisiong/neoul-download.git
-cd neoul-download
+git clone https://github.com/Ladisiong/neoya-download.git
+cd neoya-download
 # Vercel 배포: Root Directory를 frontend 로 설정
 # app.js의 API_URL을 본인의 Apps Script URL로 교체 (Vercel 환경변수 권장)
 ```
@@ -204,7 +204,7 @@ curl "https://YOUR_APPS_SCRIPT_WEBAPP_URL/exec?action=getBrandInfo"
 응답 예시:
 ```json
 {
-  "brand": "너울",
+  "brand": "너야",
   "copyright_holder": "김태민",
   "trademark_application": "40-2026-0081306, 40-2026-0081307",
   "trademark_type": "국문 문자 상표",
@@ -246,9 +246,9 @@ curl "https://YOUR_APPS_SCRIPT_WEBAPP_URL/exec?action=getBrandInfo"
 
 ### 상표권
 
-- **'너울'** 은 김태민이 특허청에 출원한 **국문 문자 상표**입니다 (출원번호: **40-2026-0081306, 40-2026-0081307**).
+- **'너야'** 은 김태민이 특허청에 출원한 **국문 문자 상표**입니다 (출원번호: **40-2026-0081306, 40-2026-0081307**).
 - 9류(상품) 및 41류(서비스) 지정 상품/서비스에 대한 상표권이 출원되어 있습니다.
-- 본 저장소는 '너울' 국문 상표의 **실제 사용 증거**로 활용됩니다.
+- 본 저장소는 '너야' 국문 상표의 **실제 사용 증거**로 활용됩니다.
 
 ### 라이선스
 
@@ -268,7 +268,7 @@ curl "https://YOUR_APPS_SCRIPT_WEBAPP_URL/exec?action=getBrandInfo"
 
 | 버전 | 날짜 | 변경 내용 |
 |------|------|----------|
-| 1.0.0 | 2026-04-24 | **너울 브랜드 공식 런칭**. 교육자료 배포 시스템 v1 공개. 저작권자 김태민 명시. 상표 출원번호 TN26005859KJ 명시. 배포 학습자료는 김태민 본인 출제 교육 저작물임을 명시. |
+| 1.0.0 | 2026-04-24 | **너야 브랜드 공식 런칭**. 교육자료 배포 시스템 v1 공개. 저작권자 김태민 명시. 상표 출원번호 TN26005859KJ 명시. 배포 학습자료는 김태민 본인 출제 교육 저작물임을 명시. |
 | 1.1.0 | 2026-04-25 | **학습자료 운영 형태 명시화 (v2.2 정합)**. 사회탐구·과학탐구를 회차별 문제편·해설편 2파일 1세트로 운영함을 명시. 한국사를 핵심용어 및 사건정리 단일 통합본으로 운영함을 명시. 경제이론요약집을 단일 통합본으로 운영함을 명시. `getBrandInfo` 응답에 `content_format` 및 `folder_structure` 필드 추가. README·Code.gs·index.html·LICENSE 일관성 정합. |
 | 1.1.1 | 2026-04-25 | (내부 검토용) 운영 인스턴스 ID 코드 반영 시도. 보안 검토 후 v1.1.2에서 회수. |
 | 1.1.2 | 2026-04-25 | **보안 가이드라인 회복 (D-3 가이드 7-4 정합)**. `Code.gs`의 `FOLDER_ID`·`SPREADSHEET_ID`를 플레이스홀더로 복원. `app.js`의 `API_URL`을 플레이스홀더로 복원 + 데모 모드 분기 복원. README의 배포 URL 섹션과 curl 예시를 일반 자리표시자로 복원. 깃허브 공개 저장소 노출 위험 차단. 깃허브 저장소 URL은 안전하므로 LICENSE에 유지. |
@@ -276,6 +276,6 @@ curl "https://YOUR_APPS_SCRIPT_WEBAPP_URL/exec?action=getBrandInfo"
 
 ---
 
-**오늘의 한 물결이, 내일의 너울이 됩니다.**
+**오늘의 한 물결이, 내일의 너야가 됩니다.**
 
-*© 2026 김태민 · 너울 · 상표 출원번호 40-2026-0081306, 40-2026-0081307*
+*© 2026 김태민 · 너야 · 상표 출원번호 40-2026-0081306, 40-2026-0081307*
