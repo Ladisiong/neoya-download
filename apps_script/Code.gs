@@ -7,7 +7,7 @@
  *  용도         : 교육용 소프트웨어 · 교육자료 배포업
  *  저작권자      : 김태민
  *  상표 출원인    : 김태민
- *  상표 출원번호  : 40-2026-0081306, 40-2026-0081307 (지정상품 9류 / 지정서비스 41류)
+ *  상표          : 너야(NEOYA) 문자 상표 출원 준비 중 (2026-09)
  *  상표 표장     : 너야 (국문 문자 상표)
  *  버전         : 1.1.0 (v2.2 정합화)
  *  최초 공개일    : 2026-04-24
@@ -54,7 +54,7 @@ const FOLDER_ID = '1WqHImkxvkozJnnZnJi9T0vsFkLsUrvjb'; // 너야 전용 구글 �
 const SPREADSHEET_ID = '1uy96xvIUH9xroouvnYG_Rj3TNx8dnjPrGjwsGbQVMJg'; // 너야 다운로드 로그 시트 ID
 const BRAND_NAME = '너야';
 const COPYRIGHT_HOLDER = '김태민';
-const TRADEMARK_APPLICATION = '40-2026-0081306, 40-2026-0081307';
+const TRADEMARK_APPLICATION = 'NEOYA (pending 2026-09)';
 
 // 과목별 설정 (너야 학습자료 체계 - 김태민 본인 출제)
 const SUBJECTS = {
