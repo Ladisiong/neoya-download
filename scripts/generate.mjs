@@ -16,8 +16,8 @@ const KBROWS = [];  // tutor_kb(RAG) sidecar: weekly concept -> learn tutor KB
 mkdirSync(OUT, { recursive: true });
 
 const MODELS = {
-  anthropic: process.env.ANTHROPIC_MODEL || 'claude-opus-5',            // MODEL FLOOR (BHTM constitution v17.0 art.9): Opus 5 + effort high
-  anthropic2: process.env.ANTHROPIC_MODEL_FALLBACK || 'claude-fable-5-1', // same-provider fallback, ABOVE the floor
+  anthropic: process.env.ANTHROPIC_MODEL || 'claude-opus-5-5',          // D-2092: Opus 5.5 (cheaper $4/$20 and stronger than Opus 5) + effort high
+  anthropic2: process.env.ANTHROPIC_MODEL_FALLBACK || 'claude-opus-5',   // same-provider fallback at the floor (Fable 5.1 fallback retired: 2.5x price)
   openai:    process.env.OPENAI_MODEL    || '',                        // below-floor default removed (2026-09-09); opt-in via repo var only
   gemini:    process.env.GEMINI_MODEL    || 'gemini-3.1-pro-preview',  // top-tier fallback only (no Flash-class models)
 };

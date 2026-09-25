@@ -33,9 +33,10 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          ANTHROPIC_MODEL: ${{ vars.ANTHROPIC_MODEL }}
+          ANTHROPIC_MODEL: claude-opus-5-5            # D-2092: pinned (repo var pointed to claude-opus-4-8 = 99% of AI cost)
+          ANTHROPIC_MODEL_FALLBACK: claude-opus-5     # same-provider fallback at the floor (was Fable 5.1, 2.5x price)
           OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
-          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+          GEMINI_MODEL: gemini-3.1-pro-preview        # D-2092: pinned (repo var pointed to a Flash-class model below the floor)
           ONLY_SUBJECTS: ${{ github.event.inputs.only }}
         run: node scripts/generate.mjs
       - name: Commit and push (Vercel auto-deploy)
