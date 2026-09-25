@@ -359,7 +359,7 @@ function recordDownload(downloadData) {
       ]]);
       const headerRange = sheet.getRange(1, 1, 1, 10);
       headerRange.setFontWeight('bold');
-      headerRange.setBackground('#0A3D62');
+      headerRange.setBackground('#1A3A5C');
       headerRange.setFontColor('white');
     }
     sheet.appendRow([

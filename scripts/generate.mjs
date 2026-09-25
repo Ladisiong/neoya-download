@@ -190,30 +190,30 @@ const CSS = `<style>
 @page{size:A4}
 *{box-sizing:border-box}
 body{font-family:"Noto Sans CJK KR","Noto Serif CJK KR",sans-serif;color:#12222f;line-height:1.65;font-size:11pt;margin:0}
-h1{color:#0A3D62;font-size:17pt;border-bottom:3px solid #1B6CA8;padding-bottom:8px;margin:0 0 4px}
-h2{color:#1B6CA8;font-size:12.5pt;margin:18px 0 6px}
+h1{color:#1A3A5C;font-size:17pt;border-bottom:3px solid #2B5F8B;padding-bottom:8px;margin:0 0 4px}
+h2{color:#2B5F8B;font-size:12.5pt;margin:18px 0 6px}
 h3{font-size:11.5pt;margin:14px 0 4px}
 p{margin:6px 0;word-break:keep-all;overflow-wrap:anywhere}
 ul,ol{margin:6px 0 6px 18px}
 .tag{color:#5A7890;font-size:9pt;margin-bottom:10px}
 .q{border:1px solid #CFE2F0;border-radius:8px;padding:12px 14px;margin:12px 0;page-break-inside:avoid;overflow-wrap:anywhere}
-.q .no{display:inline-block;background:#1B6CA8;color:#fff;font-size:9pt;border-radius:4px;padding:1px 8px;margin-bottom:6px}
-.box{background:#EAF4FB;border-left:4px solid #3498DB;padding:8px 12px;margin:10px 0;overflow-wrap:anywhere}
+.q .no{display:inline-block;background:#2B5F8B;color:#fff;font-size:9pt;border-radius:4px;padding:1px 8px;margin-bottom:6px}
+.box{background:#EAF4FB;border-left:4px solid #5A8CB5;padding:8px 12px;margin:10px 0;overflow-wrap:anywhere}
 .q .no.adv{background:#B8860B}
 .q .no.killer{background:#7B241C}
 .q .src{display:inline-block;background:#eef2f7;color:#345;font-size:8.5pt;border-radius:4px;padding:1px 7px;margin-left:6px}
 .sol{margin:8px 0}
-.step{margin:5px 0;padding:6px 10px 6px 12px;border-left:3px solid #1B6CA8;background:#F6FAFD;border-radius:0 6px 6px 0;overflow-wrap:anywhere}
-.step>b,.step .s{color:#1B6CA8;font-weight:700;margin-right:5px}
+.step{margin:5px 0;padding:6px 10px 6px 12px;border-left:3px solid #2B5F8B;background:#F6FAFD;border-radius:0 6px 6px 0;overflow-wrap:anywhere}
+.step>b,.step .s{color:#2B5F8B;font-weight:700;margin-right:5px}
 .blk{margin:9px 0;padding:9px 12px;border-radius:6px;background:#F4F9FD;border:1px solid #E1EEF7;page-break-inside:avoid}
-.blk .lb{display:inline-block;font-weight:700;color:#0A3D62;margin-right:6px}
-.concept h3{color:#0A3D62;border-left:4px solid #1B6CA8;padding-left:8px}
+.blk .lb{display:inline-block;font-weight:700;color:#1A3A5C;margin-right:6px}
+.concept h3{color:#1A3A5C;border-left:4px solid #2B5F8B;padding-left:8px}
 svg{max-width:100%;height:auto;display:block;margin:10px auto}
 .katex svg{margin:0;max-width:none;height:inherit}
 table{border-collapse:collapse;width:100%;margin:8px 0}
 th,td{border:1px solid #CFE2F0;padding:5px 8px;font-size:10.5pt;text-align:center;overflow-wrap:anywhere}
 .foot{margin-top:22px;color:#5A7890;font-size:8.5pt;border-top:1px solid #D6E9F5;padding-top:8px}
-b{color:#0A3D62}
+b{color:#1A3A5C}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">`;
 

@@ -115,7 +115,7 @@ function generateQRCode() {
       text: TARGET_URL,
       width: 196,
       height: 196,
-      colorDark: '#0A3D62',     // SSoT 토큰 --neoya-deep-blue 와 동일 값
+      colorDark: '#1A3A5C',     // SSoT 토큰 --neoya-primary-deep 과 동일 값
       colorLight: '#FFFFFF',    // SSoT 토큰 --neoya-white 와 동일 값
       correctLevel: QRCode.CorrectLevel.H  // 고에러정정 (모바일 카메라 인식 안정성)
     });
