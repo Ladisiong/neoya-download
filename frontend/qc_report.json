@@ -1,7 +1,7 @@
 {
-  "generated": "2026-09-14T00:09:45.118Z",
+  "generated": "2026-09-28T00:34:17.689Z",
   "run": "full",
-  "sample": "수학|수학1|수열 · 기본",
+  "sample": "수학|수학1|지수와 로그 · 기본",
   "subjects_checked": 90,
   "critical_flagged": 0,
   "answer_flagged": [],
@@ -9,7 +9,7 @@
     {
       "subject": "독서",
       "category": "국어",
-      "unit": "과학·기술 독서 · 기본",
+      "unit": "주제 통합 독서 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -18,7 +18,7 @@
     {
       "subject": "독서",
       "category": "국어",
-      "unit": "과학·기술 독서 · 심화",
+      "unit": "주제 통합 독서 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -27,7 +27,7 @@
     {
       "subject": "독서",
       "category": "국어",
-      "unit": "과학·기술 독서 · 킬러",
+      "unit": "주제 통합 독서 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -36,7 +36,7 @@
     {
       "subject": "문학",
       "category": "국어",
-      "unit": "고전시가 · 기본",
+      "unit": "고전산문 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -45,7 +45,7 @@
     {
       "subject": "문학",
       "category": "국어",
-      "unit": "고전시가 · 심화",
+      "unit": "고전산문 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -54,7 +54,7 @@
     {
       "subject": "문학",
       "category": "국어",
-      "unit": "고전시가 · 킬러",
+      "unit": "고전산문 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -63,7 +63,7 @@
     {
       "subject": "화법과작문",
       "category": "국어",
-      "unit": "화법: 발표·토론·협상 · 기본",
+      "unit": "작문: 설득·정보전달·성찰 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -72,7 +72,7 @@
     {
       "subject": "화법과작문",
       "category": "국어",
-      "unit": "화법: 발표·토론·협상 · 심화",
+      "unit": "작문: 설득·정보전달·성찰 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -81,7 +81,7 @@
     {
       "subject": "화법과작문",
       "category": "국어",
-      "unit": "화법: 발표·토론·협상 · 킬러",
+      "unit": "작문: 설득·정보전달·성찰 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -90,7 +90,7 @@
     {
       "subject": "언어와매체",
       "category": "국어",
-      "unit": "국어의 변화(국어사) · 기본",
+      "unit": "매체 언어 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -99,7 +99,7 @@
     {
       "subject": "언어와매체",
       "category": "국어",
-      "unit": "국어의 변화(국어사) · 심화",
+      "unit": "매체 언어 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -108,7 +108,7 @@
     {
       "subject": "언어와매체",
       "category": "국어",
-      "unit": "국어의 변화(국어사) · 킬러",
+      "unit": "매체 언어 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -117,7 +117,7 @@
     {
       "subject": "독해",
       "category": "영어",
-      "unit": "세부 정보·도표 · 기본",
+      "unit": "빈칸 추론 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -126,7 +126,7 @@
     {
       "subject": "독해",
       "category": "영어",
-      "unit": "세부 정보·도표 · 심화",
+      "unit": "빈칸 추론 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -135,7 +135,7 @@
     {
       "subject": "독해",
       "category": "영어",
-      "unit": "세부 정보·도표 · 킬러",
+      "unit": "빈칸 추론 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -144,7 +144,7 @@
     {
       "subject": "한국사",
       "category": "한국사",
-      "unit": "일제강점기 · 기본",
+      "unit": "대한민국 현대사 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -153,7 +153,7 @@
     {
       "subject": "한국사",
       "category": "한국사",
-      "unit": "일제강점기 · 심화",
+      "unit": "대한민국 현대사 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -162,7 +162,7 @@
     {
       "subject": "한국사",
       "category": "한국사",
-      "unit": "일제강점기 · 킬러",
+      "unit": "대한민국 현대사 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -171,7 +171,7 @@
     {
       "subject": "수학1",
       "category": "수학",
-      "unit": "수열 · 기본",
+      "unit": "지수와 로그 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -180,7 +180,7 @@
     {
       "subject": "수학1",
       "category": "수학",
-      "unit": "수열 · 심화",
+      "unit": "지수와 로그 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -189,7 +189,7 @@
     {
       "subject": "수학1",
       "category": "수학",
-      "unit": "수열 · 킬러",
+      "unit": "지수와 로그 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -198,7 +198,7 @@
     {
       "subject": "수학2",
       "category": "수학",
-      "unit": "함수의 극한과 연속 · 기본",
+      "unit": "미분 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -207,7 +207,7 @@
     {
       "subject": "수학2",
       "category": "수학",
-      "unit": "함수의 극한과 연속 · 심화",
+      "unit": "미분 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -216,7 +216,7 @@
     {
       "subject": "수학2",
       "category": "수학",
-      "unit": "함수의 극한과 연속 · 킬러",
+      "unit": "미분 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -225,7 +225,7 @@
     {
       "subject": "확률과통계",
       "category": "수학",
-      "unit": "경우의 수·순열과 조합 · 기본",
+      "unit": "확률 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -234,7 +234,7 @@
     {
       "subject": "확률과통계",
       "category": "수학",
-      "unit": "경우의 수·순열과 조합 · 심화",
+      "unit": "확률 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -243,7 +243,7 @@
     {
       "subject": "확률과통계",
       "category": "수학",
-      "unit": "경우의 수·순열과 조합 · 킬러",
+      "unit": "확률 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -252,7 +252,7 @@
     {
       "subject": "미적분",
       "category": "수학",
-      "unit": "여러 가지 미분법 · 기본",
+      "unit": "여러 가지 적분법 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -261,7 +261,7 @@
     {
       "subject": "미적분",
       "category": "수학",
-      "unit": "여러 가지 미분법 · 심화",
+      "unit": "여러 가지 적분법 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -270,7 +270,7 @@
     {
       "subject": "미적분",
       "category": "수학",
-      "unit": "여러 가지 미분법 · 킬러",
+      "unit": "여러 가지 적분법 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -279,7 +279,7 @@
     {
       "subject": "기하",
       "category": "수학",
-      "unit": "이차곡선 · 기본",
+      "unit": "평면벡터 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -288,7 +288,7 @@
     {
       "subject": "기하",
       "category": "수학",
-      "unit": "이차곡선 · 심화",
+      "unit": "평면벡터 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -297,7 +297,7 @@
     {
       "subject": "기하",
       "category": "수학",
-      "unit": "이차곡선 · 킬러",
+      "unit": "평면벡터 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -306,7 +306,7 @@
     {
       "subject": "생활과윤리",
       "category": "사탐",
-      "unit": "생명·성·가족 윤리 · 기본",
+      "unit": "사회·직업 윤리 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -315,7 +315,7 @@
     {
       "subject": "생활과윤리",
       "category": "사탐",
-      "unit": "생명·성·가족 윤리 · 심화",
+      "unit": "사회·직업 윤리 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -324,7 +324,7 @@
     {
       "subject": "생활과윤리",
       "category": "사탐",
-      "unit": "생명·성·가족 윤리 · 킬러",
+      "unit": "사회·직업 윤리 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -333,7 +333,7 @@
     {
       "subject": "윤리와사상",
       "category": "사탐",
-      "unit": "동양의 윤리 사상 · 기본",
+      "unit": "서양의 윤리 사상 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -342,7 +342,7 @@
     {
       "subject": "윤리와사상",
       "category": "사탐",
-      "unit": "동양의 윤리 사상 · 심화",
+      "unit": "서양의 윤리 사상 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -351,7 +351,7 @@
     {
       "subject": "윤리와사상",
       "category": "사탐",
-      "unit": "동양의 윤리 사상 · 킬러",
+      "unit": "서양의 윤리 사상 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -360,7 +360,7 @@
     {
       "subject": "한국지리",
       "category": "사탐",
-      "unit": "국토 인식과 지도 · 기본",
+      "unit": "지형 환경 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -369,7 +369,7 @@
     {
       "subject": "한국지리",
       "category": "사탐",
-      "unit": "국토 인식과 지도 · 심화",
+      "unit": "지형 환경 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -378,7 +378,7 @@
     {
       "subject": "한국지리",
       "category": "사탐",
-      "unit": "국토 인식과 지도 · 킬러",
+      "unit": "지형 환경 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -387,7 +387,7 @@
     {
       "subject": "세계지리",
       "category": "사탐",
-      "unit": "세계의 자연환경 · 기본",
+      "unit": "세계의 인문환경 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -396,7 +396,7 @@
     {
       "subject": "세계지리",
       "category": "사탐",
-      "unit": "세계의 자연환경 · 심화",
+      "unit": "세계의 인문환경 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -405,7 +405,7 @@
     {
       "subject": "세계지리",
       "category": "사탐",
-      "unit": "세계의 자연환경 · 킬러",
+      "unit": "세계의 인문환경 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -414,7 +414,7 @@
     {
       "subject": "정치와법",
       "category": "사탐",
-      "unit": "민주정치와 헌법 · 기본",
+      "unit": "기본권 보장 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -423,7 +423,7 @@
     {
       "subject": "정치와법",
       "category": "사탐",
-      "unit": "민주정치와 헌법 · 심화",
+      "unit": "기본권 보장 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -432,7 +432,7 @@
     {
       "subject": "정치와법",
       "category": "사탐",
-      "unit": "민주정치와 헌법 · 킬러",
+      "unit": "기본권 보장 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -441,7 +441,7 @@
     {
       "subject": "경제",
       "category": "사탐",
-      "unit": "시장과 가격 · 기본",
+      "unit": "국민경제: GDP·물가·실업 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -450,7 +450,7 @@
     {
       "subject": "경제",
       "category": "사탐",
-      "unit": "시장과 가격 · 심화",
+      "unit": "국민경제: GDP·물가·실업 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -459,7 +459,7 @@
     {
       "subject": "경제",
       "category": "사탐",
-      "unit": "시장과 가격 · 킬러",
+      "unit": "국민경제: GDP·물가·실업 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -468,7 +468,7 @@
     {
       "subject": "사회문화",
       "category": "사탐",
-      "unit": "개인과 사회구조 · 기본",
+      "unit": "문화와 일상생활 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -477,7 +477,7 @@
     {
       "subject": "사회문화",
       "category": "사탐",
-      "unit": "개인과 사회구조 · 심화",
+      "unit": "문화와 일상생활 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -486,7 +486,7 @@
     {
       "subject": "사회문화",
       "category": "사탐",
-      "unit": "개인과 사회구조 · 킬러",
+      "unit": "문화와 일상생활 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -495,7 +495,7 @@
     {
       "subject": "동아시아사",
       "category": "사탐",
-      "unit": "인구 이동과 문물 교류 · 기본",
+      "unit": "국제질서의 변화 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -504,7 +504,7 @@
     {
       "subject": "동아시아사",
       "category": "사탐",
-      "unit": "인구 이동과 문물 교류 · 심화",
+      "unit": "국제질서의 변화 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -513,7 +513,7 @@
     {
       "subject": "동아시아사",
       "category": "사탐",
-      "unit": "인구 이동과 문물 교류 · 킬러",
+      "unit": "국제질서의 변화 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -522,7 +522,7 @@
     {
       "subject": "세계사",
       "category": "사탐",
-      "unit": "지역 세계의 형성 · 기본",
+      "unit": "교역망의 확대 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -531,7 +531,7 @@
     {
       "subject": "세계사",
       "category": "사탐",
-      "unit": "지역 세계의 형성 · 심화",
+      "unit": "교역망의 확대 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -540,7 +540,7 @@
     {
       "subject": "세계사",
       "category": "사탐",
-      "unit": "지역 세계의 형성 · 킬러",
+      "unit": "교역망의 확대 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -549,7 +549,7 @@
     {
       "subject": "물리학1",
       "category": "과탐",
-      "unit": "운동량과 충격량 · 기본",
+      "unit": "전기와 자기 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -558,7 +558,7 @@
     {
       "subject": "물리학1",
       "category": "과탐",
-      "unit": "운동량과 충격량 · 심화",
+      "unit": "전기와 자기 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -567,7 +567,7 @@
     {
       "subject": "물리학1",
       "category": "과탐",
-      "unit": "운동량과 충격량 · 킬러",
+      "unit": "전기와 자기 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -576,7 +576,7 @@
     {
       "subject": "물리학2",
       "category": "과탐",
-      "unit": "일·에너지와 열역학 · 기본",
+      "unit": "전자기장 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -585,7 +585,7 @@
     {
       "subject": "물리학2",
       "category": "과탐",
-      "unit": "일·에너지와 열역학 · 심화",
+      "unit": "전자기장 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -594,7 +594,7 @@
     {
       "subject": "물리학2",
       "category": "과탐",
-      "unit": "일·에너지와 열역학 · 킬러",
+      "unit": "전자기장 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -603,7 +603,7 @@
     {
       "subject": "화학1",
       "category": "과탐",
-      "unit": "원자와 주기율 · 기본",
+      "unit": "화학 결합 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -612,7 +612,7 @@
     {
       "subject": "화학1",
       "category": "과탐",
-      "unit": "원자와 주기율 · 심화",
+      "unit": "화학 결합 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -621,7 +621,7 @@
     {
       "subject": "화학1",
       "category": "과탐",
-      "unit": "원자와 주기율 · 킬러",
+      "unit": "화학 결합 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -630,7 +630,7 @@
     {
       "subject": "화학2",
       "category": "과탐",
-      "unit": "용액과 총괄성 · 기본",
+      "unit": "반응 엔탈피 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -639,7 +639,7 @@
     {
       "subject": "화학2",
       "category": "과탐",
-      "unit": "용액과 총괄성 · 심화",
+      "unit": "반응 엔탈피 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -648,7 +648,7 @@
     {
       "subject": "화학2",
       "category": "과탐",
-      "unit": "용액과 총괄성 · 킬러",
+      "unit": "반응 엔탈피 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -657,7 +657,7 @@
     {
       "subject": "생명과학1",
       "category": "과탐",
-      "unit": "생명 현상의 특성 · 기본",
+      "unit": "세포와 에너지대사 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -666,7 +666,7 @@
     {
       "subject": "생명과학1",
       "category": "과탐",
-      "unit": "생명 현상의 특성 · 심화",
+      "unit": "세포와 에너지대사 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -675,7 +675,7 @@
     {
       "subject": "생명과학1",
       "category": "과탐",
-      "unit": "생명 현상의 특성 · 킬러",
+      "unit": "세포와 에너지대사 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -684,7 +684,7 @@
     {
       "subject": "생명과학2",
       "category": "과탐",
-      "unit": "세포호흡과 광합성 · 기본",
+      "unit": "유전자 발현과 조절 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -693,7 +693,7 @@
     {
       "subject": "생명과학2",
       "category": "과탐",
-      "unit": "세포호흡과 광합성 · 심화",
+      "unit": "유전자 발현과 조절 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -702,7 +702,7 @@
     {
       "subject": "생명과학2",
       "category": "과탐",
-      "unit": "세포호흡과 광합성 · 킬러",
+      "unit": "유전자 발현과 조절 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -711,7 +711,7 @@
     {
       "subject": "지구과학1",
       "category": "과탐",
-      "unit": "대기와 해양 · 기본",
+      "unit": "날씨와 기후변화 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -720,7 +720,7 @@
     {
       "subject": "지구과학1",
       "category": "과탐",
-      "unit": "대기와 해양 · 심화",
+      "unit": "날씨와 기후변화 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -729,7 +729,7 @@
     {
       "subject": "지구과학1",
       "category": "과탐",
-      "unit": "대기와 해양 · 킬러",
+      "unit": "날씨와 기후변화 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -738,7 +738,7 @@
     {
       "subject": "지구과학2",
       "category": "과탐",
-      "unit": "해수의 운동 · 기본",
+      "unit": "대기의 운동과 역학 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -747,7 +747,7 @@
     {
       "subject": "지구과학2",
       "category": "과탐",
-      "unit": "해수의 운동 · 심화",
+      "unit": "대기의 운동과 역학 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -756,7 +756,7 @@
     {
       "subject": "지구과학2",
       "category": "과탐",
-      "unit": "해수의 운동 · 킬러",
+      "unit": "대기의 운동과 역학 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -765,7 +765,7 @@
     {
       "subject": "통합사회",
       "category": "통합사회",
-      "unit": "행복과 삶의 질 · 기본",
+      "unit": "자연환경과 인간 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -774,7 +774,7 @@
     {
       "subject": "통합사회",
       "category": "통합사회",
-      "unit": "행복과 삶의 질 · 심화",
+      "unit": "자연환경과 인간 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -783,7 +783,7 @@
     {
       "subject": "통합사회",
       "category": "통합사회",
-      "unit": "행복과 삶의 질 · 킬러",
+      "unit": "자연환경과 인간 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
@@ -792,7 +792,7 @@
     {
       "subject": "통합과학",
       "category": "통합과학",
-      "unit": "변화와 다양성: 화학변화·진화 · 기본",
+      "unit": "환경과 에너지 · 기본",
       "status": "fail",
       "flags": [
         "noData"
@@ -801,7 +801,7 @@
     {
       "subject": "통합과학",
       "category": "통합과학",
-      "unit": "변화와 다양성: 화학변화·진화 · 심화",
+      "unit": "환경과 에너지 · 심화",
       "status": "fail",
       "flags": [
         "noData"
@@ -810,7 +810,7 @@
     {
       "subject": "통합과학",
       "category": "통합과학",
-      "unit": "변화와 다양성: 화학변화·진화 · 킬러",
+      "unit": "환경과 에너지 · 킬러",
       "status": "fail",
       "flags": [
         "noData"
