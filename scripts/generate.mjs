@@ -46,7 +46,7 @@ const SUBJECTS = [
 const ONLY=(process.env.ONLY_SUBJECTS||'').split(',').map(x=>x.trim()).filter(Boolean);
 const RUN=ONLY.length?SUBJECTS.filter(s=>ONLY.includes(s.sub)):SUBJECTS;
 
-const PROMPT = (s, unit) => `당신은 대한민국 수능·내신 ${s.cat}(${s.sub}) 최고 출제·해설 집필 전문가입니다. 시중 최상위 문제집과 평가원 해설집 수준의 학습자료 1세트를 만드세요. 타깃 독자는 고3 1~2등급·재수생 상위권이다. 시대인재·대성 최상위 프리미엄 교재 수준으로 만들어 '무료 배포이지만 유료 교재보다 낫다'는 인상을 주어야 한다(화장품이 샘플에 최고 퀄리티를 넣는 전략과 동일—무료라고 퀄리티가 낮으면 실패한다). 이 자료의 궁극 목적은 학생이 감탄해 '너야(NEOYA)'로 유입되는 매개체가 되는 것이다.
+const PROMPT = (s, unit) => `당신은 대한민국 수능·내신 ${s.cat}(${s.sub}) 최고 출제·해설 집필 전문가입니다. 시중 최상위 문제집과 평가원 해설집 수준의 학습자료 1세트를 만드세요. 타깃 독자는 고3 1~2등급·재수생 상위권이다. 시대인재·대성 최상위 프리미엄 교재 수준으로 만들어 '무료 배포이지만 유료 교재보다 낫다'는 인상을 주어야 한다(화장품이 샘플에 최고 퀄리티를 넣는 전략과 동일—무료라고 퀄리티가 낮으면 실패한다). 이 자료의 궁극 목적은 학생이 감탄해 '너야 NEOYA'로 유입되는 매개체가 되는 것이다.
 
 이번 자료의 단원(unit)은 「${unit}」 이다. 반드시 이 단원 범위 안에서만 개념·문항·해설을 구성하라(다른 단원 내용 혼입 금지).${s.sub==='미적분'?' ★미적분 특칙(대표님 지시, 필수): 삼각함수 관련 내용 전면 제외 — 삼각함수의 극한·미분·적분 및 sin·cos·tan 포함 문항 절대 금지, 지수·로그·다항·유리·무리함수 중심으로만 출제한다. 그리고 도형·그래프가 필요한 문항 전면 제외 — 인라인 <svg> 도형/그래프 없이 순수 대수·해석적으로 완결되는 문항만(넓이·부피·기하 해석 문제 배제).':''}${s.cat==='국어'&&s.sub==='문학'?' ★문학 특칙(대표님 지시, 필수): 문학 지문은 절대 자작하지 말고, 저작권 보호기간이 만료된(작가 사후 70년 경과·1962년 이전 사망) 실제 빈출·대표 작품의 원문을 정확히 인용한다(김소월·이육사·윤동주·한용운·정지용·현진건·김유정 등 근현대 및 정철·윤선도 등 고전 전체 가능. 백석 등 저작권 존속 현대작 금지). 작가·출처를 명시하고 지문 원문은 그대로 싣되 문항·선지·해설만 새로 창작한다.':''}
 
@@ -222,8 +222,8 @@ const KATEX_JS =
   '<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>' +
   '<script>window.addEventListener("load",function(){function done(){document.body.setAttribute("data-katex-done","1");}function render(){try{renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"$",right:"$",display:false}],throwOnError:false});}catch(e){}setTimeout(done,180);}var fam=["KaTeX_Main","KaTeX_Math","KaTeX_Size1","KaTeX_Size2","KaTeX_Size3","KaTeX_Size4","KaTeX_AMS","KaTeX_Caligraphic","KaTeX_Fraktur","KaTeX_SansSerif","KaTeX_Script","KaTeX_Typewriter"];if(document.fonts&&document.fonts.load){var ps=[];fam.forEach(function(f){["16px ","italic 16px ","bold 16px "].forEach(function(w){ps.push(document.fonts.load(w+f).catch(function(){}));});});Promise.all(ps).then(function(){return (document.fonts.ready||Promise.resolve()).catch(function(){});}).then(render);}else{setTimeout(render,700);}});</script>';
 
-const FOOT = `<div class="foot">너야(NEOYA) 무료 학습자료 · SKY 출신 교과 멘토 × AI 협업 출제<br>교육과정 성취기준 기반 새 창작(기출 지문·문항 미수록). 어떤 성적도 보장하지 않습니다. 학습 목적 제공·무단 상업적 재배포 금지.</div>`;
-const CTA = '<div class="box" style="text-align:center;margin-top:16px"><b>이 자료가 도움이 됐다면</b> — 너야(NEOYA)는 5회독 누적복습·AI 맞춤 학습으로 이어집니다. 무료 자료 더 보기 → <b>neoya.kr</b></div>';
+const FOOT = `<div class="foot">너야 NEOYA 무료 학습자료 · SKY 출신 교과 멘토 × AI 협업 출제<br>교육과정 성취기준 기반 새 창작(기출 지문·문항 미수록). 어떤 성적도 보장하지 않습니다. 학습 목적 제공·무단 상업적 재배포 금지.</div>`;
+const CTA = '<div class="box" style="text-align:center;margin-top:16px"><b>이 자료가 도움이 됐다면</b> — 너야 NEOYA는 5회독 누적복습·AI 맞춤 학습으로 이어집니다. 무료 자료 더 보기 → <b>neoya.kr</b></div>';
 const page = (title, tag, body) => `<!doctype html><html><head><meta charset="utf-8"><title>${title}</title>${CSS}</head><body><h1>${title}</h1><div class="tag">${tag}</div>${body}${CTA}${FOOT}${KATEX_JS}</body></html>`;
 
 let BROWSER = null;
