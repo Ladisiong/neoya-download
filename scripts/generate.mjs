@@ -144,8 +144,10 @@ ${pr}
 ${sol}`;
 
 const LOG_URL = 'https://iwrblahmszuthemfrhmy.supabase.co/functions/v1/log-usage';
+// 2026-11-15 보안: 사용량 기록 키는 저장소 비밀 LOG_USAGE_KEY(워크플로 env)로 받는다. 옛 공개 문자열은 키 교체 전까지만 쓰이는 대체값.
+const LOG_KEY = process.env.LOG_USAGE_KEY || 'bhtm-usage-2026';
 function logUsage(provider, model, inTok, outTok){
-  try{ fetch(LOG_URL,{method:'POST',headers:{'content-type':'application/json','x-bhtm-log':'bhtm-usage-2026'},body:JSON.stringify({provider,model,feature:'free-dist-engine',input_tokens:inTok||0,output_tokens:outTok||0})}).catch(function(){}); }catch(e){}
+  try{ fetch(LOG_URL,{method:'POST',headers:{'content-type':'application/json','x-bhtm-log':LOG_KEY},body:JSON.stringify({provider,model,feature:'free-dist-engine',input_tokens:inTok||0,output_tokens:outTok||0})}).catch(function(){}); }catch(e){}
 }
 async function callAnthropic(prompt, maxTok=20000, model=MODELS.anthropic) {
   const r = await fetch('https://api.anthropic.com/v1/messages', {
